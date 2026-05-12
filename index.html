@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic Page Setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My WDD231 Homepage</title>
+
+    <meta name="description" content="My homepage for WDD231 Frontend Development I">
+    <meta name="author" content="Guinter Chissengue">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- JavaScript -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>
+    <script src="scripts/course.js" defer></script>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="site-info">
+
+            <!-- SVG replace -->
+            <img src="images/logo.svg" alt="Website Logo" width="48" height="48">
+
+            <span>Guinter Chissengue</span>
+
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menuBtn" aria-label="Navigation Menu" aria-expanded="false">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <nav id="mainNav" aria-label="Primary Navigation">
+
+            <ul>
+
+                <li>
+                    <a href="index.html" class="current-page" aria-current="page">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Chamber
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Final
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <h1>Home</h1>
+
+        <div class="content-grid">
+
+            <!-- About Section -->
+            <section class="box">
+
+                <h2>About Me</h2>
+
+                <p>
+                    Hello!  welcome to my page about me and my passion for web
+                     development and technology.
+                    I started this journey creating HTML, CSS, and JavaScript 
+                    I hope to improve a lot and become one of the best developers in the world.
+                </p>
+
+            </section>
+
+            <!-- Image Section -->
+            <section class="box">
+
+                <h2>BYU WDD231 Student Photo</h2>
+
+
+                <img src="images/profile.jpg"
+                    alt="BYU WDD231 Student Photo"
+                    class="student-photo"
+                    loading="lazy">
+
+            </section>
+
+            <!-- Courses Section -->
+            <section class="box certificate-section">
+
+                <h2>Web and Computer Programming Certificate</h2>
+
+                <!-- Filter Buttons -->
+                <div class="buttons-area">
+
+                    <button id="showAll">
+                        All Courses
+                    </button>
+
+                    <button id="showWdd">
+                        WDD Courses
+                    </button>
+
+                    <button id="showCse">
+                        CSE Courses
+                    </button>
+
+                </div>
+
+                <!-- Dynamic Courses -->
+                <div id="courseList"></div>
+
+                <!-- Credits -->
+                <p id="creditInfo"></p>
+
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <!-- Social Links -->
+        <div class="footer-links">
+
+            <a href="https://github.com/guinterchissengue" target="_blank">
+                GitHub
+            </a>
+
+            <a href="https://linkedin.com/guinterchissengue" target="_blank">
+                LinkedIn
+            </a>
+
+            <a href="https://instagram.com/guinter65" target="_blank">
+                Instagram
+            </a>
+
+        </div>
+
+        <!-- Dynamic Year -->
+        <p>
+            © <span id="year"></span> Guinter Chissengue |All rights reserved| Mozambique
+        </p>
+
+        <!-- Last Modified -->
+        <p id="modified"></p>
+
+    </footer>
+
+</body>
+
+</html>
