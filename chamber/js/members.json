@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Mercado Municipal de Maxixe",
+    "address": "Maxixe, Província de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "mercado.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Terminal de Ferry de Maxixe",
+    "address": "Baía de Inhambane, Maxixe",
+    "phone": "",
+    "website": "",
+    "image": "ferry.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Hospital Distrital da Maxixe",
+    "address": "Maxixe, Província de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "chicuque.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Catedral de Nossa Senhora da Conceição (Inhambane)",
+    "address": "Cidade de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "catedral.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Mercado Central de Inhambane",
+    "address": "Cidade de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "m-central-inhamabane.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Aeroporto de Inhambane (INH)",
+    "address": "Cidade de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "aeroporto.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Praia do Tofo",
+    "address": "Tofo, Província de Inhambane",
+    "phone": "",
+    "website": "",
+    "image": "beach.jpg",
+    "membership": 3
+  }
+]
