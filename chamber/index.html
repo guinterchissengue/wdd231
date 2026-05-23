@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Inhambane Chamber of Commerce</title>
+
+    <meta name="description" content="Welcome to Inhambane Chamber of Commerce - supporting local businesses and tourism in Mozambique.">
+
+    <meta name="author" content="Guinter Chissengue">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Inhambane Chamber Home">
+    <meta property="og:description" content="Support local businesses and discover opportunities in Inhambane.">
+    <meta property="og:image" content="images/preview.webp">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- JS -->
+    <script defer src="scripts/home.js"></script>
+</head>
+
+<body>
+
+<header>
+    <div class="header-content">
+        <p class="site-name">Inhambane Chamber of Commerce</p>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="directory.html">Directory</a>
+            <a href="#">Discover</a>
+            <a href="#">Join</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- HERO -->
+    <section class="hero">
+        <img src="images/hero.jpg" alt="Inhambane city view">
+        <div class="hero-text">
+            <h1>Welcome to Inhambane Chamber</h1>
+            <p>Connecting businesses,pleasure, tourism, and opportunities.</p>
+            <a class="cta-button" href="#">Join the Chamber</a>
+        </div>
+    </section>
+
+    <!-- GRID -->
+    <section class="home-grid">
+
+        <!-- EVENTS -->
+        <div class="card">
+            <h2>Upcoming Events</h2>
+            <ul>
+                <li>Business Networking - June 2026</li>
+                <li>Tourism Expo - July 2026</li>
+                <li>Local Market Day - August 2026</li>
+            </ul>
+        </div>
+
+        <!-- WEATHER -->
+        <div class="card">
+            <h2>Weather</h2>
+            <p id="temp">Loading...</p>
+            <p id="desc"></p>
+
+            <h3>3-Day Forecast</h3>
+            <div id="forecast"></div>
+        </div>
+
+        <!-- SPOTLIGHTS -->
+        <div class="spotlights" id="spotlights"></div>
+
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Inhambane Chamber</p>
+    <p>Last Modification: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
