@@ -1,32 +1,32 @@
 [
   {
     "name": "Mercado Municipal de Maxixe",
-    "address": "Maxixe, Província de Inhambane",
-    "phone": "",
+    "address": "Maxixe, Inhambane",
+    "phone": "+258 84 000 0001",
     "website": "",
     "image": "mercado.jpg",
     "membership": 2
   },
   {
     "name": "Terminal de Ferry de Maxixe",
-    "address": "Baía de Inhambane, Maxixe",
-    "phone": "",
+    "address": "Baía de Inhambane",
+    "phone": "+258 84 000 0002",
     "website": "",
     "image": "ferry.jpg",
     "membership": 1
   },
   {
-    "name": "Hospital Distrital da Maxixe",
-    "address": "Maxixe, Província de Inhambane",
-    "phone": "",
+    "name": "Hospital da Maxixe",
+    "address": "Maxixe, Inhambane",
+    "phone": "+258 84 000 0003",
     "website": "",
     "image": "chicuque.jpg",
     "membership": 2
   },
   {
-    "name": "Catedral de Nossa Senhora da Conceição (Inhambane)",
+    "name": "Catedral de Inhambane",
     "address": "Cidade de Inhambane",
-    "phone": "",
+    "phone": "+258 84 000 0004",
     "website": "",
     "image": "catedral.jpg",
     "membership": 3
@@ -34,23 +34,23 @@
   {
     "name": "Mercado Central de Inhambane",
     "address": "Cidade de Inhambane",
-    "phone": "",
+    "phone": "+258 84 000 0005",
     "website": "",
-    "image": "m-central-inhamabane.jpg",
+    "image": "m-central-inhambane.jpg",
     "membership": 2
   },
   {
-    "name": "Aeroporto de Inhambane (INH)",
+    "name": "Aeroporto de Inhambane",
     "address": "Cidade de Inhambane",
-    "phone": "",
+    "phone": "+258 84 000 0006",
     "website": "",
     "image": "aeroporto.jpg",
     "membership": 1
   },
   {
     "name": "Praia do Tofo",
-    "address": "Tofo, Província de Inhambane",
-    "phone": "",
+    "address": "Tofo, Inhambane",
+    "phone": "+258 84 000 0007",
     "website": "",
     "image": "beach.jpg",
     "membership": 3

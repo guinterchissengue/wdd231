@@ -6,9 +6,7 @@ const listButton = document.querySelector("#listBtn");
 let members = [];
 
 async function getMembers() {
-
     try {
-
         const response = await fetch("data/members.json");
 
         if (!response.ok) {
@@ -20,8 +18,7 @@ async function getMembers() {
         displayMembers("grid");
 
     } catch (error) {
-
-        console.error("Error:", error);
+        console.error(error);
 
         container.innerHTML = `
             <p class="error-message">
@@ -32,15 +29,12 @@ async function getMembers() {
 }
 
 function displayMembers(view) {
-
     container.innerHTML = "";
 
-    members.forEach((member) => {
-
+    members.forEach(member => {
         const card = document.createElement("article");
 
         if (view === "list") {
-
             card.classList.add("list-view");
 
             card.innerHTML = `
@@ -48,27 +42,21 @@ function displayMembers(view) {
                 <p>${member.address}</p>
                 <p>${member.phone || "Phone not available"}</p>
             `;
-
         } else {
-
             card.classList.add("card");
 
             card.innerHTML = `
-                <img
-                    src="images/${member.image}"
-                    alt="${member.name}"
-                    loading="lazy"
-                >
+                <img src="images/${member.image}" alt="${member.name}" loading="lazy">
 
                 <h2>${member.name}</h2>
-
                 <p>${member.address}</p>
-
                 <p>${member.phone || "Phone not available"}</p>
 
-                <a href="${member.website}" target="_blank">
-                    Visit Website
-                </a>
+                ${
+                    member.website
+                        ? `<a href="${member.website}" target="_blank" rel="noopener noreferrer">Visit Website</a>`
+                        : `<p>No website available</p>`
+                }
             `;
         }
 
@@ -76,18 +64,10 @@ function displayMembers(view) {
     });
 }
 
-gridButton.addEventListener("click", () => {
-    displayMembers("grid");
-});
+gridButton.addEventListener("click", () => displayMembers("grid"));
+listButton.addEventListener("click", () => displayMembers("list"));
 
-listButton.addEventListener("click", () => {
-    displayMembers("list");
-});
-
-document.querySelector("#year").textContent =
-    new Date().getFullYear();
-
-document.querySelector("#lastModified").textContent =
-    document.lastModified;
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
 
 getMembers();
