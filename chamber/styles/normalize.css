@@ -2,7 +2,6 @@
 
 html {
     line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -16,6 +15,7 @@ main {
 img {
     border-style: none;
     max-width: 100%;
+    height: auto;
 }
 
 button,

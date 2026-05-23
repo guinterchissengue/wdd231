@@ -1,118 +1,79 @@
-// Selecting important elements from the HTML page
-// ------------------------------------------------------
+// Main container for all member cards
 const container = document.querySelector("#members-container");
 
-// Buttons used to switch between Grid and List view
+// Buttons used to switch layouts
 const gridButton = document.querySelector("#gridBtn");
 const listButton = document.querySelector("#listBtn");
 
+// Empty array that will receive JSON data
+let members = [];
 
-// ------------------------------------------------------
-// Local business/member data
-// ------------------------------------------------------
 
-// To avoid that issue and allow the project to run
-// offline without Live Server, the data is now stored
-// directly inside JavaScript.
+// ======================================================
+// Load member data from JSON file
+// ======================================================
 
-const members = [
+async function getMembers() {
 
-    {
-        name: "Mercado Municipal de Maxixe",
-        address: "Maxixe, Inhambane",
-        phone: "+258 84 000 0001",
-        website: "",
-        image: "mercado.jpg",
-        membership: 2
-    },
+    try {
 
-    {
-        name: "Terminal de Ferry de Maxixe",
-        address: "Baía de Inhambane",
-        phone: "+258 84 000 0002",
-        website: "",
-        image: "ferry.jpg",
-        membership: 1
-    },
+        // Fetch data from members.json
+        const response = await fetch("data/members.json");
 
-    {
-        name: "Hospital da Maxixe",
-        address: "Maxixe, Inhambane",
-        phone: "+258 84 000 0003",
-        website: "",
-        image: "chicuque.jpg",
-        membership: 2
-    },
+        // Verify if request was successful
+        if (!response.ok) {
 
-    {
-        name: "Catedral de Inhambane",
-        address: "Cidade de Inhambane",
-        phone: "+258 84 000 0004",
-        website: "",
-        image: "catedral.jpg",
-        membership: 3
-    },
+            throw new Error("Unable to load member data.");
 
-    {
-        name: "Mercado Central de Inhambane",
-        address: "Cidade de Inhambane",
-        phone: "+258 84 000 0005",
-        website: "",
-        image: "m-central-inhambane.jpg",
-        membership: 2
-    },
+        }
 
-    {
-        name: "Aeroporto de Inhambane",
-        address: "Cidade de Inhambane",
-        phone: "+258 84 000 0006",
-        website: "",
-        image: "aeroporto.jpg",
-        membership: 1
-    },
+        // Convert JSON into JavaScript objects
+        members = await response.json();
 
-    {
-        name: "Praia do Tofo",
-        address: "Tofo, Inhambane",
-        phone: "+258 84 000 0007",
-        website: "",
-        image: "beach.jpg",
-        membership: 3
+        // Display members automatically
+        displayMembers("grid");
+
     }
 
-];
+    catch (error) {
+
+        console.error(error);
+
+        container.innerHTML = `
+            <p class="error-message">
+                Sorry, member information could not be loaded.
+            </p>
+        `;
+    }
+}
 
 
-// ------------------------------------------------------
-// Function responsible for displaying the members
-// ------------------------------------------------------
-
-// This function receives a parameter called "view"
+// ======================================================
+// Display members
+// ======================================================
 
 function displayMembers(view) {
 
-    // Before displaying new content,
-    // clear everything already inside the container
+    // Clear container before displaying data
     container.innerHTML = "";
 
-    // Go through each member one by one
+    // Loop through all members
     members.forEach(member => {
 
-        // Create a new article element for every member
+        // Create article element
         const card = document.createElement("article");
 
 
-        // --------------------------------------------------
+        // ==================================================
         // LIST VIEW
-        // --------------------------------------------------
+        // ==================================================
 
         if (view === "list") {
 
-            // Add the CSS class used for list styling
             card.classList.add("list-view");
 
-            // Insert member information into the article
             card.innerHTML = `
+
                 <h2>${member.name}</h2>
 
                 <p>
@@ -122,25 +83,28 @@ function displayMembers(view) {
 
                 <p>
                     <strong>Phone:</strong>
-                    ${member.phone || "Phone not available"}
+                    ${member.phone}
                 </p>
             `;
         }
 
 
-        // --------------------------------------------------
+        // ==================================================
         // GRID VIEW
-        // --------------------------------------------------
+        // ==================================================
 
         else {
 
             card.classList.add("card");
+
             card.innerHTML = `
 
                 <img
                     src="images/${member.image}"
                     alt="${member.name}"
                     loading="lazy"
+                    width="300"
+                    height="200"
                 >
 
                 <h2>${member.name}</h2>
@@ -152,14 +116,12 @@ function displayMembers(view) {
 
                 <p>
                     <strong>Phone:</strong>
-                    ${member.phone || "Phone not available"}
+                    ${member.phone}
                 </p>
 
                 ${
                     member.website
 
-                    // If the business has a website,
-                    // display the link
                     ? `
                         <a
                             href="${member.website}"
@@ -170,7 +132,6 @@ function displayMembers(view) {
                         </a>
                     `
 
-                    // Otherwise show a simple message
                     : `
                         <p>No website available</p>
                     `
@@ -178,17 +139,18 @@ function displayMembers(view) {
             `;
         }
 
-        // Add the finished card/list item to the page
+        // Add card to page
         container.appendChild(card);
 
     });
 }
 
 
-// ------------------------------------------------------
-// Button interactions
-// ------------------------------------------------------
+// ======================================================
+// Button Events
+// ======================================================
 
+// Grid view button
 gridButton.addEventListener("click", () => {
 
     displayMembers("grid");
@@ -196,6 +158,7 @@ gridButton.addEventListener("click", () => {
 });
 
 
+// List view button
 listButton.addEventListener("click", () => {
 
     displayMembers("list");
@@ -203,20 +166,22 @@ listButton.addEventListener("click", () => {
 });
 
 
-// ------------------------------------------------------
-// Footer information
-// ------------------------------------------------------
+// ======================================================
+// Footer Information
+// ======================================================
 
+// Current year
 document.querySelector("#year").textContent =
     new Date().getFullYear();
 
 
-// Display the last modification date of the document
+// Last modified date
 document.querySelector("#lastModified").textContent =
     document.lastModified;
 
 
-// ------------------------------------------------------
-// Initial page load
-// ------------------------------------------------------
-displayMembers("grid");
+// ======================================================
+// Start application
+// ======================================================
+
+getMembers();
