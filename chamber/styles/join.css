@@ -1,47 +1,52 @@
-
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
-}
-
-/* Main color variables */
+/* Color variables */
 :root {
     --primary-color: #0a4d68;
     --secondary-color: #ffffff;
-    --accent-color: #d4af37;
+    --accent-color: #088395;
     --background-color: #f5f5f5;
     --text-color: #222222;
+    --border-color: #cccccc;
+    --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Universal selector */
+/* Global reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* General body styling */
+/* Body styling */
 body {
-    font-family: "Roboto", sans-serif;
+    font-family: 'Roboto', sans-serif;
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Header section */
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header */
 header {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--secondary-color);
     padding: 1rem;
 }
 
-/* Header content layout */
+/* Header container */
 .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
-/* Website name */
+/* Site title */
 .site-name {
     font-size: 1.5rem;
     font-weight: 700;
@@ -50,122 +55,136 @@ header {
 /* Mobile menu button */
 #menuBtn {
     display: none;
+    background: none;
+    border: none;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
-/* Navigation styling */
+/* Navigation */
 nav {
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 /* Navigation links */
 nav a {
-    color: white;
+    color: var(--secondary-color);
     text-decoration: none;
     padding: 0.5rem;
     border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Active navigation link */
+/* Active page */
 nav a.active {
     background-color: var(--accent-color);
-    color: black;
 }
 
-/* Main page content */
+/* Hover effect */
+nav a:hover {
+    background-color: var(--accent-color);
+}
+
+/* Main content */
 main {
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
     padding: 1rem;
 }
 
-/* Main heading */
+/* Main title */
 h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
 
 /* Join page layout */
-.join-layout {
+.join-container {
     display: grid;
     gap: 2rem;
 }
 
-/* Membership form styling */
-.membership-form {
-    background-color: white;
+/* Form styling */
+.join-form {
+    background-color: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
 /* Form labels */
-.membership-form label {
+.join-form label {
     display: flex;
     flex-direction: column;
     margin-bottom: 1rem;
     font-weight: 700;
 }
 
-/* Form inputs */
-.membership-form input,
-.membership-form select,
-.membership-form textarea {
+/* Inputs */
+.join-form input,
+.join-form select,
+.join-form textarea {
     margin-top: 0.4rem;
     padding: 0.8rem;
-    border: 1px solid #cccccc;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
     font-size: 1rem;
 }
 
-/* Submit button */
+/* Buttons */
+button,
 .submit-btn {
-    background-color: var(--primary-color);
-    color: white;
     border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-/* Hover effects */
-.submit-btn:hover,
-.membership-card button:hover {
-    background-color: #088395;
+/* Submit button */
+.submit-btn {
+    padding: 0.9rem;
+    width: 100%;
+    font-weight: 700;
 }
 
-/* Membership cards layout */
+/* Hover states */
+button:hover,
+.submit-btn:hover {
+    background-color: var(--accent-color);
+}
+
+/* Membership cards */
 .membership-cards {
     display: grid;
     gap: 1rem;
 }
 
-/* Individual membership card */
-.membership-card {
-    background-color: white;
+/* Single membership card */
+.card {
+    background-color: var(--secondary-color);
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Card buttons */
-.membership-card button {
-    margin-top: 1rem;
-    padding: 0.8rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: white;
-    cursor: pointer;
-}
-
-/* Animation when page loads */
-.animate-card {
+    box-shadow: 0 2px 10px var(--shadow-color);
     animation: fadeUp 1s ease forwards;
     opacity: 0;
 }
 
-/* Card animation */
+/* Card titles */
+.card h2 {
+    margin-bottom: 1rem;
+}
+
+/* Card buttons */
+.card button {
+    margin-top: 1rem;
+    padding: 0.8rem;
+}
+
+/* Animation */
 @keyframes fadeUp {
 
     from {
@@ -179,7 +198,7 @@ h1 {
     }
 }
 
-/* Modal styling */
+/* Dialog modal */
 dialog {
     border: none;
     border-radius: 10px;
@@ -187,47 +206,37 @@ dialog {
     max-width: 400px;
 }
 
-/* Modal background overlay */
+/* Dialog backdrop */
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* Thank you page */
+/* Thank you section */
 .thankyou-section {
-    background-color: white;
+    background-color: var(--secondary-color);
     padding: 2rem;
-    margin-top: 2rem;
     border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow-color);
 }
 
-/* Results section */
+/* Results */
 #results p {
     margin-bottom: 1rem;
 }
 
-/* Footer styling */
+/* Footer */
 footer {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
     padding: 1rem;
     margin-top: 2rem;
 }
 
-/* Keyboard accessibility */
-button:focus,
-input:focus,
-select:focus,
-textarea:focus,
-a:focus {
-    outline: 3px solid var(--accent-color);
-    outline-offset: 2px;
-}
-
 /* Desktop layout */
 @media screen and (min-width: 768px) {
 
-    .join-layout {
+    .join-container {
         grid-template-columns: 2fr 1fr;
         align-items: start;
     }
@@ -239,17 +248,12 @@ a:focus {
 
     #menuBtn {
         display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-        margin-top: 1rem;
     }
 
     nav {
         display: none;
         flex-direction: column;
+        margin-top: 1rem;
     }
 
     nav.open {

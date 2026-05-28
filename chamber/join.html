@@ -2,7 +2,6 @@
 <html lang="en-US">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -16,7 +15,7 @@
     >
 
     <meta
-        name="author" content="Guinter Chissengue"
+        name="author"  content="Guinter Chissengue"
     >
 
     <!-- Open Graph -->
@@ -27,17 +26,22 @@
 
     <meta
         property="og:description"
-        content="Become a member of the Inhambane Chamber of Commerce."
+        content="Apply for membership at the Inhambane Chamber of Commerce."
     >
 
     <meta
         property="og:image"
-        content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp"
+        content="https://yourdomain.com/images/chamber-social.webp"
     >
 
     <meta
         property="og:url"
-        content="https://guinterchissengue.github.io/wdd231/chamber/join.html"
+        content="https://yourdomain.com/join.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
     >
 
     <title>Join | Inhambane Chamber of Commerce</title>
@@ -45,7 +49,24 @@
     <!-- Favicon -->
     <link
         rel="icon"
-        href="images/favicon.ico"
+        href="favicon.ico"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
     >
 
     <!-- CSS -->
@@ -56,390 +77,437 @@
 
     <link
         rel="stylesheet"
-        href="styles/small.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="styles/large.css"
-    >
-
-    <link
-        rel="stylesheet"
         href="styles/join.css"
     >
 
     <!-- JavaScript -->
     <script
-        defer
         src="scripts/join.js"
+        defer
     ></script>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-    <div class="header-content">
+        <div class="header-content">
 
-        <p class="site-name">
-            Inhambane Chamber of Commerce
-        </p>
+            <h1>
+                Inhambane Chamber of Commerce
+            </h1>
 
-        <!-- Mobile menu button -->
-        <button
-            id="menuBtn"
-            aria-label="Open navigation menu"
-        >
-            ☰
-        </button>
-
-        <!-- Navigation -->
-        <nav
-            id="navMenu"
-            aria-label="Main Navigation"
-        >
-
-            <a href="index.html">
-                Home
-            </a>
-
-            <a href="directory.html">
-                Directory
-            </a>
-
-            <a href="discover.html">
-                Discover
-            </a>
-
-            <a
-                href="join.html"
-                class="active"
+            <button
+                id="menuBtn"
+                aria-label="Open navigation menu"
             >
-                Join
-            </a>
+                ☰
+            </button>
 
-        </nav>
+            <nav id="navMenu">
 
-    </div>
+                <a href="index.html">
+                    Home
+                </a>
 
-</header>
+                <a href="directory.html">
+                    Directory
+                </a>
 
-<main>
+                <a href="discover.html">
+                    Discover
+                </a>
 
-    <h1>Membership Application</h1>
+                <a
+                    href="join.html"
+                    class="active"
+                >
+                    Join
+                </a>
 
-    <section class="join-container">
+            </nav>
 
-        <!-- Membership Form -->
-        <form
-            method="get"
-            action="thankyou.html"
-            class="join-form"
-        >
+        </div>
 
-            <label>
-                First Name
+    </header>
+
+    <main>
+
+        <h2>
+            Membership Application
+        </h2>
+
+        <section class="join-layout">
+
+            <!-- Form -->
+            <form
+                method="get"
+                action="thankyou.html"
+                class="membership-form"
+            >
+
+                <label>
+                    First Name
+
+                    <input
+                        type="text"
+                        name="firstname"
+                        title="Enter your first name"
+                        autocomplete="given-name"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Last Name
+
+                    <input
+                        type="text"
+                        name="lastname"
+                        title="Enter your last name"
+                        autocomplete="family-name"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Organizational Title
+
+                    <input
+                        type="text"
+                        name="organizationtitle"
+                        title="Enter your organizational title"
+                        autocomplete="organization-title"
+                        pattern="[A-Za-z\s\-]{7,}"
+                        placeholder="Marketing Manager"
+                    >
+                </label>
+
+                <label>
+                    Email Address
+
+                    <input
+                        type="email"
+                        name="email"
+                        title="Enter your email address"
+                        autocomplete="email"
+                        placeholder="example@email.com"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Mobile Phone Number
+
+                    <input
+                        type="tel"
+                        name="phone"
+                        title="Enter your mobile phone number"
+                        autocomplete="tel"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Business / Organization Name
+
+                    <input
+                        type="text"
+                        name="organization"
+                        title="Enter your business or organization name"
+                        autocomplete="organization"
+                        required
+                    >
+                </label>
+
+                <label>
+                    Membership Level
+
+                    <select
+                        name="membership"
+                        title="Select a membership level"
+                        required
+                    >
+
+                        <option value="">
+                            Select Membership
+                        </option>
+
+                        <option value="np">
+                            NP Membership
+                        </option>
+
+                        <option value="bronze">
+                            Bronze Membership
+                        </option>
+
+                        <option value="silver">
+                            Silver Membership
+                        </option>
+
+                        <option value="gold">
+                            Gold Membership
+                        </option>
+
+                    </select>
+
+                </label>
+
+                <label>
+                    Business Description
+
+                    <textarea
+                        name="description"
+                        title="Describe your business"
+                        rows="5"
+                    ></textarea>
+
+                </label>
+
+                <!-- Hidden timestamp -->
+                <input
+                    type="hidden"
+                    name="timestamp"
+                    id="timestamp"
+                >
 
                 <input
-                    type="text"
-                    name="firstname"
-                    title="Enter your first name"
-                    autocomplete="given-name"
-                    required
-                >
-            </label>
-
-            <label>
-                Last Name
-
-                <input
-                    type="text"
-                    name="lastname"
-                    title="Enter your last name"
-                    autocomplete="family-name"
-                    required
-                >
-            </label>
-
-            <label>
-                Organizational Title
-
-                <input
-                    type="text"
-                    name="organizationtitle"
-                    title="Enter your organizational title"
-                    autocomplete="organization-title"
-                    pattern="[A-Za-z\-\s]{7,}"
-                    placeholder="Marketing Manager"
-                >
-            </label>
-
-            <label>
-                Email Address
-
-                <input
-                    type="email"
-                    name="email"
-                    title="Enter your email address"
-                    autocomplete="email"
-                    placeholder="example@email.com"
-                    required
-                >
-            </label>
-
-            <label>
-                Mobile Phone Number
-
-                <input
-                    type="tel"
-                    name="phone"
-                    title="Enter your mobile phone number"
-                    autocomplete="tel"
-                    required
-                >
-            </label>
-
-            <label>
-                Business/Organization Name
-
-                <input
-                    type="text"
-                    name="organization"
-                    title="Enter your business or organization name"
-                    autocomplete="organization"
-                    required
-                >
-            </label>
-
-            <label>
-                Membership Level
-
-                <select
-                    name="membership"
-                    title="Select a membership level"
-                    required
+                    type="submit"
+                    value="Submit Membership Application"
+                    class="submit-btn"
                 >
 
-                    <option value="">
-                        Select Membership
-                    </option>
+            </form>
 
-                    <option value="np">
+            <!-- Membership Cards -->
+            <section class="membership-cards">
+
+                <div class="membership-card animate-card">
+
+                    <h3>
                         NP Membership
-                    </option>
+                    </h3>
 
-                    <option value="bronze">
+                    <p>
+                        Designed for nonprofit organizations.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-modal="npModal"
+                    >
+                        Learn More
+                    </button>
+
+                </div>
+
+                <div class="membership-card animate-card">
+
+                    <h3>
                         Bronze Membership
-                    </option>
+                    </h3>
 
-                    <option value="silver">
+                    <p>
+                        Basic membership benefits for small businesses.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-modal="bronzeModal"
+                    >
+                        Learn More
+                    </button>
+
+                </div>
+
+                <div class="membership-card animate-card">
+
+                    <h3>
                         Silver Membership
-                    </option>
+                    </h3>
 
-                    <option value="gold">
+                    <p>
+                        Additional advertising and event discounts.
+                    </p>
+
+                    <button
+                        type="button"
+                        data-modal="silverModal"
+                    >
+                        Learn More
+                    </button>
+
+                </div>
+
+                <div class="membership-card animate-card">
+
+                    <h3>
                         Gold Membership
-                    </option>
+                    </h3>
 
-                </select>
+                    <p>
+                        Premium benefits and spotlight promotions.
+                    </p>
 
-            </label>
+                    <button
+                        type="button"
+                        data-modal="goldModal"
+                    >
+                        Learn More
+                    </button>
 
-            <label>
-                Business Description
+                </div>
 
-                <textarea
-                    name="description"
-                    title="Describe your business"
-                    rows="5"
-                ></textarea>
-
-            </label>
-
-            <!-- Hidden timestamp -->
-            <input
-                type="hidden"
-                name="timestamp"
-                id="timestamp"
-            >
-
-            <input
-                type="submit"
-                value="Submit Membership Application"
-                class="submit-btn"
-            >
-
-        </form>
-
-        <!-- Membership Cards -->
-        <section class="membership-cards">
-
-            <div class="card">
-
-                <h2>NP Membership</h2>
-
-                <p>
-                    Designed for nonprofit organizations.
-                </p>
-
-                <button id="openNpModal">
-                    Learn More
-                </button>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Bronze Membership</h2>
-
-                <p>
-                    Basic membership benefits for small businesses.
-                </p>
-
-                <button id="openBronzeModal">
-                    Learn More
-                </button>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Silver Membership</h2>
-
-                <p>
-                    Additional advertising and event discounts.
-                </p>
-
-                <button id="openSilverModal">
-                    Learn More
-                </button>
-
-            </div>
-
-            <div class="card">
-
-                <h2>Gold Membership</h2>
-
-                <p>
-                    Premium benefits and spotlight promotions.
-                </p>
-
-                <button id="openGoldModal">
-                    Learn More
-                </button>
-
-            </div>
+            </section>
 
         </section>
 
-    </section>
+        <!-- NP Modal -->
+        <dialog id="npModal">
 
-    <!-- NP Modal -->
-    <dialog id="npModal">
+            <h3>
+                NP Membership Benefits
+            </h3>
 
-        <h2>NP Membership Benefits</h2>
+            <ul>
 
-        <ul>
+                <li>
+                    No membership fee
+                </li>
 
-            <li>No membership fee</li>
+                <li>
+                    Community event participation
+                </li>
 
-            <li>Community event participation</li>
+                <li>
+                    Basic networking opportunities
+                </li>
 
-            <li>Basic networking opportunities</li>
+            </ul>
 
-        </ul>
+            <button
+                type="button"
+                class="close-modal"
+            >
+                Close
+            </button>
 
-        <button id="closeNpModal">
-            Close
-        </button>
+        </dialog>
 
-    </dialog>
+        <!-- Bronze Modal -->
+        <dialog id="bronzeModal">
 
-    <!-- Bronze Modal -->
-    <dialog id="bronzeModal">
+            <h3>
+                Bronze Membership Benefits
+            </h3>
 
-        <h2>Bronze Membership Benefits</h2>
+            <ul>
 
-        <ul>
+                <li>
+                    Business directory listing
+                </li>
 
-            <li>Business directory listing</li>
+                <li>
+                    Monthly networking events
+                </li>
 
-            <li>Monthly networking events</li>
+                <li>
+                    Training workshops
+                </li>
 
-            <li>Training workshops</li>
+            </ul>
 
-        </ul>
+            <button
+                type="button"
+                class="close-modal"
+            >
+                Close
+            </button>
 
-        <button id="closeBronzeModal">
-            Close
-        </button>
+        </dialog>
 
-    </dialog>
+        <!-- Silver Modal -->
+        <dialog id="silverModal">
 
-    <!-- Silver Modal -->
-    <dialog id="silverModal">
+            <h3>
+                Silver Membership Benefits
+            </h3>
 
-        <h2>Silver Membership Benefits</h2>
+            <ul>
 
-        <ul>
+                <li>
+                    All Bronze benefits
+                </li>
 
-            <li>All Bronze benefits</li>
+                <li>
+                    Homepage advertising
+                </li>
 
-            <li>Homepage advertising</li>
+                <li>
+                    Event discounts
+                </li>
 
-            <li>Event discounts</li>
+            </ul>
 
-        </ul>
+            <button
+                type="button"
+                class="close-modal"
+            >
+                Close
+            </button>
 
-        <button id="closeSilverModal">
-            Close
-        </button>
+        </dialog>
 
-    </dialog>
+        <!-- Gold Modal -->
+        <dialog id="goldModal">
 
-    <!-- Gold Modal -->
-    <dialog id="goldModal">
+            <h3>
+                Gold Membership Benefits
+            </h3>
 
-        <h2>Gold Membership Benefits</h2>
+            <ul>
 
-        <ul>
+                <li>
+                    All Silver benefits
+                </li>
 
-            <li>All Silver benefits</li>
+                <li>
+                    Featured homepage spotlight
+                </li>
 
-            <li>Featured homepage spotlight</li>
+                <li>
+                    Premium business promotion
+                </li>
 
-            <li>Premium business promotion</li>
+            </ul>
 
-        </ul>
+            <button
+                type="button"
+                class="close-modal"
+            >
+                Close
+            </button>
 
-        <button id="closeGoldModal">
-            Close
-        </button>
+        </dialog>
 
-    </dialog>
+    </main>
 
-</main>
+    <footer>
 
-<footer>
+        <p>
+            &copy;
+            <span id="year"></span>
+            Inhambane Chamber of Commerce
+        </p>
 
-    <p>
-        &copy;
-        <span id="year"></span>
-        Guinter Chissengue
-    </p>
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
 
-    <p>
-        WDD 231 Chamber Project
-    </p>
-
-    <p>
-        Last Modification:
-        <span id="lastModified"></span>
-    </p>
-
-</footer>
+    </footer>
 
 </body>
-</html>
 
+</html>

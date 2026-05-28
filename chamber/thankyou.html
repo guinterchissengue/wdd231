@@ -16,7 +16,8 @@
     >
 
     <meta
-        name="author" content="Guinter Chissengue"
+        name="author"
+        content="Guinter Chissengue"
     >
 
     <!-- Open Graph -->
@@ -27,17 +28,22 @@
 
     <meta
         property="og:description"
-        content="Thank you for submitting your membership application."
+        content="Thank you for your Chamber membership application."
     >
 
     <meta
         property="og:image"
-        content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp"
+        content="https://yourdomain.com/images/chamber-social.webp"
     >
 
     <meta
         property="og:url"
-        content="https://guinterchissengue.github.io/wdd231/chamber/thankyou.html"
+        content="https://yourdomain.com/thankyou.html"
+    >
+
+    <meta
+        property="og:type"
+        content="website"
     >
 
     <title>Thank You | Inhambane Chamber of Commerce</title>
@@ -45,7 +51,24 @@
     <!-- Favicon -->
     <link
         rel="icon"
-        href="images/favicon.ico"
+        href="favicon.ico"
+    >
+
+    <!-- Google Fonts -->
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
     >
 
     <!-- CSS -->
@@ -56,78 +79,64 @@
 
     <link
         rel="stylesheet"
-        href="styles/small.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="styles/large.css"
-    >
-
-    <link
-        rel="stylesheet"
         href="styles/join.css"
     >
 
     <!-- JavaScript -->
     <script
-        defer
         src="scripts/thankyou.js"
+        defer
     ></script>
 
 </head>
 
 <body>
 
-<header>
+    <header>
 
-    <div class="header-content">
+        <div class="header-content">
 
-        <p class="site-name">
+            <h1>
+                Inhambane Chamber of Commerce
+            </h1>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="thankyou-section">
+
+            <h2>
+                Thank You for Your Application!
+            </h2>
+
+            <p>
+                Your membership application was submitted successfully.
+            </p>
+
+            <div id="results"></div>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>
+            &copy;
+            <span id="year"></span>
             Inhambane Chamber of Commerce
         </p>
 
-    </div>
-
-</header>
-
-<main>
-
-    <section class="thankyou-section">
-
-        <h1>
-            Thank You!
-        </h1>
-
         <p>
-            Your membership application was submitted successfully.
+            Last Modification:
+            <span id="lastModified"></span>
         </p>
 
-        <!-- Submitted form information -->
-        <div id="results"></div>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <p>
-        &copy;
-        <span id="year"></span>
-        Guinter Chissengue
-    </p>
-
-    <p>
-        WDD 231 Chamber Project
-    </p>
-
-    <p>
-        Last Modification:
-        <span id="lastModified"></span>
-    </p>
-
-</footer>
+    </footer>
 
 </body>
+
 </html>
