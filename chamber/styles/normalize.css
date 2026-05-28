@@ -1,23 +1,29 @@
 /* normalize.css */
 
+/* Better default line spacing */
 html {
     line-height: 1.15;
+    scroll-behavior: smooth;
 }
 
+/* Remove default body margin */
 body {
     margin: 0;
 }
 
+/* Main element support */
 main {
     display: block;
 }
 
+/* Responsive images */
 img {
     border-style: none;
     max-width: 100%;
     height: auto;
 }
 
+/* Improve form consistency */
 button,
 input,
 select,
@@ -25,10 +31,12 @@ textarea {
     font: inherit;
 }
 
+/* Remove link background on active state */
 a {
     background-color: transparent;
 }
 
+/* Universal box sizing */
 * {
     box-sizing: border-box;
 }

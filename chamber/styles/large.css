@@ -1,12 +1,9 @@
+/* Desktop layout */
 @media screen and (min-width: 768px) {
 
-    .header-content {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+    .join-layout {
+        grid-template-columns: 2fr 1fr;
+        align-items: start;
     }
 
-    #members-container {
-        grid-template-columns: repeat(3, 1fr);
-    }
 }
