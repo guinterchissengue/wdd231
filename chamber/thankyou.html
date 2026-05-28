@@ -19,12 +19,49 @@
         name="author" content="Guinter Chissengue"
     >
 
-    <title>Thank You | Inhambane Chamber</title>
+    <!-- Open Graph -->
+    <meta
+        property="og:title"
+        content="Thank You | Inhambane Chamber of Commerce"
+    >
+
+    <meta
+        property="og:description"
+        content="Thank you for submitting your membership application."
+    >
+
+    <meta
+        property="og:image"
+        content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp"
+    >
+
+    <meta
+        property="og:url"
+        content="https://guinterchissengue.github.io/wdd231/chamber/thankyou.html"
+    >
+
+    <title>Thank You | Inhambane Chamber of Commerce</title>
+
+    <!-- Favicon -->
+    <link
+        rel="icon"
+        href="images/favicon.ico"
+    >
 
     <!-- CSS -->
     <link
         rel="stylesheet"
         href="styles/normalize.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/small.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="styles/large.css"
     >
 
     <link
@@ -42,49 +79,55 @@
 
 <body>
 
-    <header>
+<header>
 
-        <div class="header-content">
+    <div class="header-content">
 
-            <p class="site-name">
-                Inhambane Chamber of Commerce
-            </p>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <section class="thankyou-section">
-
-            <h1>Thank You!</h1>
-
-            <p>
-                Your membership application has been submitted successfully.
-            </p>
-
-            <!-- Form results -->
-            <div id="results"></div>
-
-        </section>
-
-    </main>
-
-    <footer>
-
-        <p>
-            &copy;
-            <span id="year"></span>
+        <p class="site-name">
             Inhambane Chamber of Commerce
         </p>
 
+    </div>
+
+</header>
+
+<main>
+
+    <section class="thankyou-section">
+
+        <h1>
+            Thank You!
+        </h1>
+
         <p>
-            Last Modification:
-            <span id="lastModified"></span>
+            Your membership application was submitted successfully.
         </p>
 
-    </footer>
+        <!-- Submitted form information -->
+        <div id="results"></div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+        &copy;
+        <span id="year"></span>
+        Guinter Chissengue
+    </p>
+
+    <p>
+        WDD 231 Chamber Project
+    </p>
+
+    <p>
+        Last Modification:
+        <span id="lastModified"></span>
+    </p>
+
+</footer>
 
 </body>
 </html>
