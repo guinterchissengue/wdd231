@@ -2,6 +2,7 @@
 <html lang="en-US">
 
 <head>
+
     <meta charset="UTF-8">
 
     <meta
@@ -15,7 +16,8 @@
     >
 
     <meta
-        name="author"  content="Guinter Chissengue"
+        name="author"
+        content="Guinter Chissengue"
     >
 
     <!-- Open Graph -->
@@ -31,12 +33,12 @@
 
     <meta
         property="og:image"
-        content="https://yourdomain.com/images/chamber-social.webp"
+        content="https://guinterchissengue.github.io/wdd231/chamber/images/chamber-social.webp"
     >
 
     <meta
         property="og:url"
-        content="https://yourdomain.com/join.html"
+        content="https://guinterchissengue.github.io/wdd231/chamber/join.html"
     >
 
     <meta
@@ -94,9 +96,9 @@
 
         <div class="header-content">
 
-            <h1>
+            <p class="site-name">
                 Inhambane Chamber of Commerce
-            </h1>
+            </p>
 
             <button
                 id="menuBtn"
@@ -134,13 +136,13 @@
 
     <main>
 
-        <h2>
-            Membership Application
-        </h2>
+        <!-- SINGLE H1 INSIDE MAIN -->
+        <h1>
+            Join the Inhambane Chamber of Commerce
+        </h1>
 
         <section class="join-layout">
 
-            <!-- Form -->
             <form
                 method="get"
                 action="thankyou.html"
@@ -265,7 +267,6 @@
 
                 </label>
 
-                <!-- Hidden timestamp -->
                 <input
                     type="hidden"
                     name="timestamp"
@@ -280,14 +281,13 @@
 
             </form>
 
-            <!-- Membership Cards -->
             <section class="membership-cards">
 
                 <div class="membership-card animate-card">
 
-                    <h3>
+                    <h2>
                         NP Membership
-                    </h3>
+                    </h2>
 
                     <p>
                         Designed for nonprofit organizations.
@@ -304,9 +304,9 @@
 
                 <div class="membership-card animate-card">
 
-                    <h3>
+                    <h2>
                         Bronze Membership
-                    </h3>
+                    </h2>
 
                     <p>
                         Basic membership benefits for small businesses.
@@ -323,9 +323,9 @@
 
                 <div class="membership-card animate-card">
 
-                    <h3>
+                    <h2>
                         Silver Membership
-                    </h3>
+                    </h2>
 
                     <p>
                         Additional advertising and event discounts.
@@ -342,9 +342,9 @@
 
                 <div class="membership-card animate-card">
 
-                    <h3>
+                    <h2>
                         Gold Membership
-                    </h3>
+                    </h2>
 
                     <p>
                         Premium benefits and spotlight promotions.
@@ -363,27 +363,18 @@
 
         </section>
 
-        <!-- NP Modal -->
+        <!-- MODALS -->
+
         <dialog id="npModal">
 
-            <h3>
+            <h2>
                 NP Membership Benefits
-            </h3>
+            </h2>
 
             <ul>
-
-                <li>
-                    No membership fee
-                </li>
-
-                <li>
-                    Community event participation
-                </li>
-
-                <li>
-                    Basic networking opportunities
-                </li>
-
+                <li>No membership fee</li>
+                <li>Community event participation</li>
+                <li>Basic networking opportunities</li>
             </ul>
 
             <button
@@ -395,27 +386,16 @@
 
         </dialog>
 
-        <!-- Bronze Modal -->
         <dialog id="bronzeModal">
 
-            <h3>
+            <h2>
                 Bronze Membership Benefits
-            </h3>
+            </h2>
 
             <ul>
-
-                <li>
-                    Business directory listing
-                </li>
-
-                <li>
-                    Monthly networking events
-                </li>
-
-                <li>
-                    Training workshops
-                </li>
-
+                <li>Business directory listing</li>
+                <li>Monthly networking events</li>
+                <li>Training workshops</li>
             </ul>
 
             <button
@@ -427,27 +407,16 @@
 
         </dialog>
 
-        <!-- Silver Modal -->
         <dialog id="silverModal">
 
-            <h3>
+            <h2>
                 Silver Membership Benefits
-            </h3>
+            </h2>
 
             <ul>
-
-                <li>
-                    All Bronze benefits
-                </li>
-
-                <li>
-                    Homepage advertising
-                </li>
-
-                <li>
-                    Event discounts
-                </li>
-
+                <li>All Bronze benefits</li>
+                <li>Homepage advertising</li>
+                <li>Event discounts</li>
             </ul>
 
             <button
@@ -459,27 +428,16 @@
 
         </dialog>
 
-        <!-- Gold Modal -->
         <dialog id="goldModal">
 
-            <h3>
+            <h2>
                 Gold Membership Benefits
-            </h3>
+            </h2>
 
             <ul>
-
-                <li>
-                    All Silver benefits
-                </li>
-
-                <li>
-                    Featured homepage spotlight
-                </li>
-
-                <li>
-                    Premium business promotion
-                </li>
-
+                <li>All Silver benefits</li>
+                <li>Featured homepage spotlight</li>
+                <li>Premium business promotion</li>
             </ul>
 
             <button
