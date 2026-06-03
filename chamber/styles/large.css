@@ -21,7 +21,7 @@
     }
 }
 
-/* Hover ONLY desktop (FIXED - no duplication) */
+/* Hover ONLY desktop */
 @media (min-width: 1024px) {
     .card img {
         transition: transform 0.3s ease, filter 0.3s ease;
