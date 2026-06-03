@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover | Inhambane Chamber of Commerce</title>
+    <meta name="description" content="Explore attractions, landmarks, and points of interest in the Inhambane area.">
+    <meta name="author" content="Guinter Chissengue">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Discover Inhambane">
+    <meta property="og:description" content="Discover the beauty, culture, and attractions of Inhambane.">
+    <meta property="og:image" content="images/preview.webp">
+    <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/chamber/discover.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- Discover JS module -->
+    <script defer type="module" src="scripts/discover.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="header-content">
+            <p class="site-name">Inhambane Chamber of Commerce</p>
+
+            <!-- Navigation -->
+            <nav aria-label="Main Navigation">
+                <a href="index.html">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="discover.html" class="active">Discover</a>
+                <a href="join.html">Join</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+
+        <h1>Discover Inhambane</h1>
+
+        <!-- Visitor Message -->
+        <div id="visitor-message" class="visitor-message"></div>
+
+        <!-- Attractions Cards Container -->
+        <section id="attractions-container" aria-label="Inhambane Attractions"></section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; <span id="year"></span> Guinter Chissengue | All rights reserved</p>
+        <p>WDD 231 Chamber Project</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+</html>

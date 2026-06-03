@@ -1,0 +1,52 @@
+// Export an array of 8 points of interest export const attractions = 
+
+[
+    {
+        "name": "Mercado Municipal de Maxixe",
+        "address": "Maxixe, Inhambane",
+        "description": "A vibrant local market full of crafts, fresh food, and culture.",
+        "image": "mercado.webp"
+    },
+    {
+        "name": "Terminal de Ferry de Maxixe",
+        "address": "Baía de Inhambane",
+        "description": "The main ferry terminal connecting Inhambane to nearby islands.",
+        "image": "ferry.webp"
+    },
+    {
+        "name": "Hospital da Maxixe",
+        "address": "Maxixe, Inhambane",
+        "description": "A major healthcare provider for the region.",
+        "image": "chicuque.webp"
+    },
+    {
+        "name": "Catedral de Inhambane",
+        "address": "Cidade de Inhambane",
+        "description": "Historic cathedral with colonial architecture and local heritage.",
+        "image": "catedral.webp"
+    },
+    {
+        "name": "Mercado Central de Inhambane",
+        "address": "Cidade de Inhambane",
+        "description": "Central market offering traditional goods and fresh produce.",
+        "image": "m-central-inhambane.webp"
+    },
+    {
+        "name": "Aeroporto de Inhambane",
+        "address": "Cidade de Inhambane",
+        "description": "Regional airport connecting Inhambane to major cities.",
+        "image": "aeroporto.webp"
+    },
+    {
+        "name": "Praia do Tofo",
+        "address": "Tofo, Inhambane",
+        "description": "Popular beach destination known for diving and relaxing scenery.",
+        "image": "beach.webp"
+    },
+    {
+        "name": "Reserva Marinha de Tofo",
+        "address": "Tofo, Inhambane",
+        "description": "Protected marine area famous for snorkeling and wildlife.",
+        "image": "tofo-reserve.webp"
+    }
+];
