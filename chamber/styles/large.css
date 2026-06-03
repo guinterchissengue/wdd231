@@ -1,8 +1,4 @@
-/* =========================
-   LARGE SCREEN STYLES
-========================= */
-
-/* Navigation becomes horizontal */
+/* Navigation desktop */
 @media (min-width: 768px) {
     nav {
         flex-direction: row;
@@ -11,42 +7,28 @@
     }
 }
 
-@media (min-width: 768px) {
-    #members-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
+/* Tablet */
 @media (min-width: 768px) {
     #attractions-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-
+/* Desktop */
 @media (min-width: 1024px) {
-    #members-container,
     #attractions-container {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
-
+/* Hover ONLY desktop (FIXED - no duplication) */
 @media (min-width: 1024px) {
-
-    .card img,
-    article img {
+    .card img {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .card img:hover,
-    article img:hover {
+    .card img:hover {
         transform: scale(1.05);
         filter: brightness(1.1);
     }
-}
-
-
-nav a:hover {
-    transition: 0.3s ease;
 }

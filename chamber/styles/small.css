@@ -1,11 +1,8 @@
-/* Body */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f5f7fa;
+    background-color: #ffffff;
     color: #1a1a1a;
-    line-height: 1.6;
 }
 
 /* Header */
@@ -15,122 +12,47 @@ header {
     padding: 1rem;
 }
 
-/* Site name */
-.site-name {
-    font-size: 1.2rem;
-    font-weight: 700;
-}
-
 /* Navigation */
 nav {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin-top: 1rem;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
-    padding: 0.5rem;
 }
 
-nav a:hover {
-    background-color: #088395;
-    border-radius: 5px;
-}
-
-/* Active link */
-nav a.active {
-    border-bottom: 2px solid #ffffff;
-}
-
-/* Main content */
+/* Main layout */
 main {
     padding: 1rem;
 }
 
-/* Page title */
-h1 {
-    text-align: center;
+/* Visitor message */
+.visitor-message {
+    background-color: #e6f2f8;
+    padding: 1rem;
+    border-left: 4px solid #0a4d68;
     margin-bottom: 1rem;
 }
 
-.view-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
-
-.view-buttons button {
-    background-color: #0a4d68;
-    color: #ffffff;
-    border: none;
-    padding: 0.7rem 1rem;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-#members-container,
+/* Cards */
 #attractions-container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
 }
 
-/* Card style */
-.card,
-article {
-    background-color: #ffffff;
+.card {
+    background: #ffffff;
     padding: 1rem;
     border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-/* Images */
-.card img,
-article img {
+.card img {
     width: 100%;
     height: auto;
     border-radius: 5px;
-}
-
-/* Text */
-.card h2,
-article h2 {
-    font-size: 1.2rem;
-    margin-top: 0.5rem;
-}
-
-/* Address */
-address {
-    font-style: normal;
-    color: #444;
-}
-
-/* Buttons inside cards */
-.card button,
-article button {
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-    border: none;
-    background-color: #0a4d68;
-    color: white;
-    border-radius: 5px;
-}
-
-.visitor-message {
-    background-color: #e7f4fa;
-    padding: 1rem;
-    margin-bottom: 1rem;
-    border-left: 4px solid #0a4d68;
-}
-
-footer {
-    background-color: #0a4d68;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
 }
