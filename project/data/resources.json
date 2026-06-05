@@ -1,107 +1,86 @@
 [
-{
-"title":"Pomodoro Technique",
-"category":"Time Management",
-"difficulty":"Easy",
-"benefit":"Improves concentration",
-"description":"Study for 25 minutes followed by a short break."
-},
-{
-"title":"Flashcards",
-"category":"Exam Preparation",
-"difficulty":"Easy",
-"benefit":"Improves memory",
-"description":"Review key concepts using question and answer cards."
-},
-{
-"title":"Cornell Notes",
-"category":"Note Taking",
-"difficulty":"Medium",
-"benefit":"Organized learning",
-"description":"Structured note taking system."
-},
-{
-"title":"Mind Mapping",
-"category":"Learning",
-"difficulty":"Easy",
-"benefit":"Visual organization",
-"description":"Connect ideas visually."
-},
-{
-"title":"Active Recall",
-"category":"Exam Preparation",
-"difficulty":"Medium",
-"benefit":"Long-term retention",
-"description":"Retrieve information without looking at notes."
-},
-{
-"title":"Practice Testing",
-"category":"Exams",
-"difficulty":"Medium",
-"benefit":"Builds confidence",
-"description":"Use sample questions regularly."
-},
-{
-"title":"Weekly Planner",
-"category":"Organization",
-"difficulty":"Easy",
-"benefit":"Better scheduling",
-"description":"Plan assignments and deadlines."
-},
-{
-"title":"Goal Setting",
-"category":"Productivity",
-"difficulty":"Easy",
-"benefit":"Increases motivation",
-"description":"Create realistic academic goals."
-},
-{
-"title":"Study Groups",
-"category":"Collaboration",
-"difficulty":"Easy",
-"benefit":"Peer learning",
-"description":"Discuss and solve problems together."
-},
-{
-"title":"Reading Strategies",
-"category":"Learning",
-"difficulty":"Medium",
-"benefit":"Improved understanding",
-"description":"Use active reading techniques."
-},
-{
-"title":"Time Blocking",
-"category":"Time Management",
-"difficulty":"Medium",
-"benefit":"Improves efficiency",
-"description":"Assign blocks of time to tasks."
-},
-{
-"title":"Healthy Sleep",
-"category":"Wellness",
-"difficulty":"Easy",
-"benefit":"Better focus",
-"description":"Maintain a consistent sleep schedule."
-},
-{
-"title":"Stress Management",
-"category":"Wellness",
-"difficulty":"Medium",
-"benefit":"Reduces anxiety",
-"description":"Practice relaxation techniques."
-},
-{
-"title":"Assignment Planning",
-"category":"Organization",
-"difficulty":"Easy",
-"benefit":"Meet deadlines",
-"description":"Break projects into smaller tasks."
-},
-{
-"title":"Digital Notes",
-"category":"Technology",
-"difficulty":"Easy",
-"benefit":"Easy access",
-"description":"Store notes digitally for quick review."
-}
+  {
+    "title": "Pomodoro Technique",
+    "category": "Time Management",
+    "difficulty": "Easy",
+    "benefit": "Improves concentration",
+    "description": "Study for 25 minutes, then take a short break before starting another focused session."
+  },
+  {
+    "title": "Flashcards",
+    "category": "Exam Preparation",
+    "difficulty": "Easy",
+    "benefit": "Improves memory",
+    "description": "Review key concepts using question and answer cards to practice active recall."
+  },
+  {
+    "title": "Cornell Notes",
+    "category": "Note Taking",
+    "difficulty": "Medium",
+    "benefit": "Organizes learning",
+    "description": "Divide notes into sections for main ideas, details, and summaries after class."
+  },
+  {
+    "title": "Mind Mapping",
+    "category": "Learning",
+    "difficulty": "Easy",
+    "benefit": "Supports visual organization",
+    "description": "Connect ideas visually to understand how topics relate to one another."
+  },
+  {
+    "title": "Active Recall",
+    "category": "Exam Preparation",
+    "difficulty": "Medium",
+    "benefit": "Builds long-term retention",
+    "description": "Try to remember information without looking at notes, then check what you missed."
+  },
+  {
+    "title": "Practice Testing",
+    "category": "Exams",
+    "difficulty": "Medium",
+    "benefit": "Builds confidence",
+    "description": "Use sample questions regularly to prepare for the format and pressure of exams."
+  },
+  {
+    "title": "Weekly Planner",
+    "category": "Organization",
+    "difficulty": "Easy",
+    "benefit": "Improves scheduling",
+    "description": "Plan assignments, study sessions, and deadlines at the beginning of each week."
+  },
+  {
+    "title": "Goal Setting",
+    "category": "Productivity",
+    "difficulty": "Easy",
+    "benefit": "Increases motivation",
+    "description": "Create realistic academic goals and break them into smaller steps."
+  },
+  {
+    "title": "Study Groups",
+    "category": "Collaboration",
+    "difficulty": "Easy",
+    "benefit": "Encourages peer learning",
+    "description": "Discuss topics, compare notes, and solve problems with classmates."
+  },
+  {
+    "title": "Reading Strategies",
+    "category": "Learning",
+    "difficulty": "Medium",
+    "benefit": "Improves understanding",
+    "description": "Preview headings, ask questions, highlight carefully, and summarize what you read."
+  },
+  {
+    "title": "Time Blocking",
+    "category": "Time Management",
+    "difficulty": "Medium",
+    "benefit": "Improves efficiency",
+    "description": "Assign blocks of time to specific tasks so your day has a clear structure."
+  },
+  {
+    "title": "Healthy Sleep",
+    "category": "Wellness",
+    "difficulty": "Easy",
+    "benefit": "Supports better focus",
+    "description": "Maintain a consistent sleep schedule so your brain can rest and process information."
+  }
 ]

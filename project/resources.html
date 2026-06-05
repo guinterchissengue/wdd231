@@ -1,155 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>
-Study Resources | Student Study Resources
-</title>
-
-<meta name="description" content="Browse useful academic resources including study methods, exam preparation and productivity strategies.">
-
-<meta name="author" content="Guinter CHissengue">
-
-<link rel="icon" href="images/logo.webp">
-
-<meta property="og:title"
-content="Study Resources">
-
-
-<meta property="og:description"
-content="Academic resources for students.">
-
-
-<link rel="stylesheet"
-href="css/style.css">
-
-
-<script type="module"
-src="js/resources.js">
-</script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Study Resources | Student Study Resources</title>
+  <meta name="description" content="Browse academic resources including study methods, exam preparation strategies, note taking systems, and productivity ideas.">
+  <meta name="author" content="Guinter Chissengue">
+  <link rel="icon" href="images/logo.webp">
+  <meta property="og:title" content="Study Resources">
+  <meta property="og:description" content="Academic resources and learning strategies for students.">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/resources.js"></script>
 </head>
 
 <body>
+  <header>
+    <a class="logo" href="index.html">
+      <img src="images/logo.webp" alt="Student Study Resources logo" width="50" height="50">
+      <span>Study Resources</span>
+    </a>
 
-<header>
+    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      &#9776;
+    </button>
 
-<a class="logo" href="index.html">
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a class="active" href="resources.html">Resources</a>
+      <a href="study-tips.html">Study Tips</a>
+    </nav>
+  </header>
 
-<img src="images/logo.webp"
-alt="Student Study Resources logo">
+  <main>
+    <section class="page-title">
+      <h1>Learning Resources</h1>
+      <p>Explore strategies that can improve your academic performance and daily study routine.</p>
+    </section>
 
-<span>
-Study Resources
-</span>
+    <!-- JavaScript loads the resource cards from the JSON file. -->
+    <section id="resourceContainer" class="resource-grid" aria-live="polite">
+      <p>Loading resources...</p>
+    </section>
 
-</a>
+    <dialog id="resourceModal">
+      <h2 id="modalTitle">Resource</h2>
+      <p id="modalText">Information</p>
+      <button id="closeModal" class="button" type="button">Close</button>
+    </dialog>
+  </main>
 
-<button id="menuButton"
-aria-label="Open navigation menu">
-
-☰
-
-</button>
-<nav id="mainNav">
-
-<a href="index.html">
-Home
-</a>
-
-<a class="active"
-href="resources.html">
-
-Resources
-
-</a>
-
-<a href="study-tips.html">
-
-Study Tips
-
-</a>
-
-</nav>
-
-</header>
-
-<main>
-
-<section class="page-title">
-<h1>
-Learning Resources
-</h1>
-<p>
-Explore strategies that can improve your academic performance.
-</p>
-
-</section>
-
-<section id="resourceContainer"
-class="resource-grid">
-
-<p>
-Loading resources...
-</p>
-
-</section>
-<dialog id="resourceModal">
-<div>
-
-<h2 id="modalTitle">
-Resource
-</h2>
-
-
-<p id="modalText">
-Information
-</p>
-
-
-<button id="closeModal">
-Close
-</button>
-
-
-</div>
-
-
-</dialog>
-
-
-
-</main>
-
-
-
-
-<footer>
-
-
-<p>
-© 2026 Student Study Resources
-</p>
-
-
-<a href="attributions.html">
-Attributions
-</a>
-
-
-<a href="#">
-Project Demonstration Video
-</a>
-
-
-</footer>
-
-
-
+  <footer>
+    <p>&copy; 2026 Student Study Resources</p>
+    <a href="references.html">References</a>
+  </footer>
 </body>
-
-
 </html>

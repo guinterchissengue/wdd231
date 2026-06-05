@@ -1,34 +1,33 @@
-const menuButton = document.querySelector("#menuButton");
-const nav = document.querySelector("#mainNav");
+// This file controls the study tips page menu and weekly plan dialog.
+const menuButton = document.querySelector(`#menuButton`);
+const mainNav = document.querySelector(`#mainNav`);
+const openButton = document.querySelector(`#openModal`);
+const closeButton = document.querySelector(`#closeStudyModal`);
+const modal = document.querySelector(`#studyModal`);
 
-if (menuButton) {
+function toggleMenu() {
+  mainNav.classList.toggle(`open`);
 
-    menuButton.addEventListener("click", () => {
-
-        nav.classList.toggle("open");
-
-    });
+  const isOpen = mainNav.classList.contains(`open`);
+  menuButton.setAttribute(`aria-expanded`, `${isOpen}`);
 }
 
-const openButton = document.querySelector("#openModal");
-const closeButton = document.querySelector("#closeStudyModal");
-
-const modal = document.querySelector("#studyModal");
-
-if (openButton) {
-
-    openButton.addEventListener("click", () => {
-
-        modal.showModal();
-
-    });
+function openStudyPlan() {
+  modal.showModal();
 }
 
-if (closeButton) {
+function closeStudyPlan() {
+  modal.close();
+}
 
-    closeButton.addEventListener("click", () => {
+if (menuButton && mainNav) {
+  menuButton.addEventListener(`click`, toggleMenu);
+}
 
-        modal.close();
+if (openButton && modal) {
+  openButton.addEventListener(`click`, openStudyPlan);
+}
 
-    });
+if (closeButton && modal) {
+  closeButton.addEventListener(`click`, closeStudyPlan);
 }

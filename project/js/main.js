@@ -1,18 +1,28 @@
-const menuButton = document.querySelector("#menuButton");
-const mainNav = document.querySelector("#mainNav");
+// This file controls the home page menu and the visit message.
+const menuButton = document.querySelector(`#menuButton`);
+const mainNav = document.querySelector(`#mainNav`);
+const visitMessage = document.querySelector(`#visitMessage`);
 
-if (menuButton) {
+function toggleMenu() {
+  mainNav.classList.toggle(`open`);
 
-    menuButton.addEventListener("click", () => {
-
-        mainNav.classList.toggle("open");
-
-    });
+  const isOpen = mainNav.classList.contains(`open`);
+  menuButton.setAttribute(`aria-expanded`, `${isOpen}`);
 }
 
-const visitCount = Number(localStorage.getItem("visitCount")) || 0;
+function updateVisitCount() {
+  const visitCount = Number(localStorage.getItem(`visitCount`)) || 0;
+  const newVisitCount = visitCount + 1;
 
-localStorage.setItem(
-    "visitCount",
-    visitCount + 1
-);
+  localStorage.setItem(`visitCount`, `${newVisitCount}`);
+
+  if (visitMessage) {
+    visitMessage.textContent = `You have visited this website ${newVisitCount} time(s) on this browser.`;
+  }
+}
+
+if (menuButton && mainNav) {
+  menuButton.addEventListener(`click`, toggleMenu);
+}
+
+updateVisitCount();

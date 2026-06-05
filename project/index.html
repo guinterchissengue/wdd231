@@ -1,200 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Student Study Resources | Home</title>
-
-    <meta name="description"content="Student Study Resources provides study tips, academic 
-    support, productivity strategies, and learning resources for students.">
-
-    <meta name="author" content="Guinter Chissengue">
-
-    <link rel="icon" href="images/logo.webp">
-
-    <meta property="og:title" content="Student Study Resources">
-    <meta property="og:description"
-        content="Helpful study resources and academic strategies for students.">
-    <meta property="og:type" content="website">
-
-    <link rel="stylesheet" href="css/style.css">
-
-    <script type="module" src="js/main.js"></script>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Study Resources | Home</title>
+  <meta name="description" content="Student Study Resources provides study tips, academic support, productivity strategies, and learning resources for students.">
+  <meta name="author" content="Guinter Chissengue">
+  <link rel="icon" href="images/logo.webp">
+  <meta property="og:title" content="Student Study Resources">
+  <meta property="og:description" content="Helpful study resources and academic strategies for students.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js"></script>
 </head>
 
-
 <body>
-
-<header>
-
+  <header>
     <a class="logo" href="index.html">
-        <img src="images/logo.webp" alt="Student Study Resources logo">
-        <span>Study Resources</span>
+      <img src="images/logo.webp" alt="Student Study Resources logo" width="50" height="50">
+      <span>Study Resources</span>
     </a>
 
-
-    <button id="menuButton"
-        aria-label="Open navigation menu">
-        ☰
+    <!-- I used a simple menu button so the navigation works well on small screens. -->
+    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
+      &#9776;
     </button>
 
-
     <nav id="mainNav">
-
-        <a class="active" href="index.html">
-            Home
-        </a>
-
-        <a href="resources.html">
-            Resources
-        </a>
-
-        <a href="study-tips.html">
-            Study Tips
-        </a>
-
+      <a class="active" href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="study-tips.html">Study Tips</a>
     </nav>
-
-
-</header>
-
-
-
-<main>
-
-
-<section class="hero">
-
-
-<div>
-
-<h1>
-Improve Your Study Habits
-</h1>
-
-
-<p>
-Discover simple strategies, productivity ideas,
-and academic resources designed to help students
-learn better and stay organized.
-</p>
-
-
-<a class="button" href="resources.html">
-Explore Resources
-</a>
-
-
-</div>
-
-
-
-<img 
-src="images/study.webp"
-alt="Student studying with books and laptop"
-loading="lazy">
-
-
-</section>
-
-
-
-
-<section class="cards">
-
-
-<article>
-
-<h2>
-Study Tips
-</h2>
-
-<p>
-Learn effective techniques that improve focus,
-memory, and understanding.
-</p>
-
-</article>
-
-
-
-<article>
-
-<h2>
-Exam Preparation
-</h2>
-
-<p>
-Prepare for tests using practical strategies
-and organized study plans.
-</p>
-
-</article>
-
-
-
-<article>
-
-<h2>
-Time Management
-</h2>
-
-<p>
-Create routines that help balance assignments,
-classes, and personal activities.
-</p>
-
-</article>
-
-
-</section>
-
-
-
-<section class="about">
-
-<h2>
-Why This Website?
-</h2>
-
-<p>
-Many students struggle with deadlines, exams,
-and staying motivated. This website provides
-simple academic support in one place.
-</p>
-
-
-</section>
-
-
-</main>
-
-
-
-
-<footer>
-
-
-<p>
-© 2026 Student Study Resources
-</p>
-
-
-<a href="attributions.html">
-Attributions
-</a>
-
-
-<a href="#">
-Project Demonstration Video
-</a>
-
-</footer>
-
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <h1>Improve Your Study Habits</h1>
+        <p>
+          Discover practical strategies, productivity ideas, and academic resources designed
+          to help students learn better, stay organized, and prepare for success.
+        </p>
+        <a class="button" href="resources.html">Explore Resources</a>
+      </div>
+
+      <img
+        src="images/study.webp"
+        alt="Student studying with books and a laptop"
+        width="700"
+        height="467"
+        loading="lazy"
+      >
+    </section>
+
+    <!-- These cards give users a quick summary of what the website offers. -->
+    <section class="cards" aria-label="Main study support topics">
+      <article>
+        <h2>Study Tips</h2>
+        <p>Learn effective techniques that improve focus, memory, and understanding.</p>
+      </article>
+
+      <article>
+        <h2>Exam Preparation</h2>
+        <p>Prepare for tests using practical strategies and organized study plans.</p>
+      </article>
+
+      <article>
+        <h2>Time Management</h2>
+        <p>Create routines that help balance assignments, classes, and personal activities.</p>
+      </article>
+    </section>
+
+    <section class="about">
+      <h2>Why This Website?</h2>
+      <p>
+        Many students struggle with deadlines, exams, and staying motivated. This website
+        provides simple academic support in one place so students can build better learning habits.
+      </p>
+      <p id="visitMessage"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Student Study Resources</p>
+    <a href="references.html">References</a>
+  </footer>
 </body>
-
 </html>
