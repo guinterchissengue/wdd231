@@ -1,0 +1,50 @@
+@media screen and (min-width: 768px) {
+  #menuButton {
+    display: none;
+  }
+
+  #mainNav {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: row;
+    gap: 1.5rem;
+    margin-top: 0;
+  }
+
+  #mainNav a {
+    padding: 0.25rem 0;
+  }
+
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h1,
+  .page-title h1,
+  .tips h1 {
+    font-size: 2.5rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .resource-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo span {
+    font-size: 0.95rem;
+  }
+
+  main {
+    padding: 0.85rem;
+  }
+
+  .button,
+  button {
+    width: 100%;
+  }
+}
