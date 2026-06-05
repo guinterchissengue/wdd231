@@ -1,0 +1,184 @@
+:root {
+    --primary-color: #0f4c81;
+    --secondary-color: #ffffff;
+    --accent-color: #f4f4f4;
+    --text-color: #222222;
+    --max-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+    background-color: var(--secondary-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+header {
+    background: var(--primary-color);
+    color: white;
+    padding: 1rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.logo img {
+    width: 50px;
+}
+
+#menuButton {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    border: none;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+#mainNav {
+    display: none;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+#mainNav.open {
+    display: flex;
+}
+
+#mainNav a {
+    color: white;
+    text-decoration: none;
+    padding: .5rem 0;
+}
+
+.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+main {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.hero {
+    display: grid;
+    gap: 2rem;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.cards,
+.resource-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.cards article,
+.resource-card {
+    background: var(--accent-color);
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: .75rem 1.25rem;
+    background: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-title {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.tips article {
+    margin-bottom: 1.5rem;
+}
+
+form {
+    display: grid;
+    gap: .75rem;
+    margin-top: 1rem;
+}
+
+input {
+    padding: .75rem;
+}
+
+dialog {
+    padding: 1.5rem;
+    max-width: 500px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: var(--primary-color);
+    color: white;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: white;
+    display: block;
+    margin-top: .5rem;
+}
+
+@media (min-width: 768px) {
+
+    #menuButton {
+        display: none;
+    }
+
+    #mainNav {
+        display: flex;
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .resource-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
