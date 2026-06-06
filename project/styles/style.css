@@ -6,8 +6,8 @@
 }
 
 body {
-  background-color: #ffffff;
-  color: #222222;
+  background-color: rgb(255 255 255);
+  color: rgb(34 34 34);
   font-family: "Roboto", Arial, Helvetica, sans-serif;
   line-height: 1.6;
 }
@@ -20,8 +20,8 @@ img {
 
 header {
   align-items: center;
-  background-color: #0f4c81;
-  color: #ffffff;
+  background-color: rgb(15 76 129);
+  color: rgb(255 255 255);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -30,7 +30,7 @@ header {
 
 .logo {
   align-items: center;
-  color: #ffffff;
+  color: rgb(255 255 255);
   display: flex;
   font-weight: 700;
   gap: 0.5rem;
@@ -43,8 +43,8 @@ header {
 
 #menuButton {
   background: none;
-  border: 2px solid transparent;
-  color: #ffffff;
+  border: 2px solid rgb(15 76 129);
+  color: rgb(255 255 255);
   cursor: pointer;
   display: block;
   font-size: 1.6rem;
@@ -52,7 +52,7 @@ header {
 }
 
 #menuButton:focus {
-  border-color: #ffd166;
+  border-color: rgb(255 209 102);
   outline: none;
 }
 
@@ -70,21 +70,21 @@ header {
 }
 
 #mainNav a {
-  color: #ffffff;
+  color: rgb(255 255 255);
   padding: 0.65rem 0;
   text-decoration: none;
 }
 
 #mainNav a:hover,
 #mainNav a:focus {
-  color: #ffd166;
+  color: rgb(255 209 102);
 }
 
 #mainNav .active {
-  color: #ffffff;
+  color: rgb(255 255 255);
   font-weight: 700;
   text-decoration: underline;
-  text-decoration-color: #ffd166;
+  text-decoration-color: rgb(255 209 102);
   text-decoration-thickness: 3px;
   text-underline-offset: 0.25rem;
 }
@@ -105,7 +105,7 @@ main {
 .hero h1,
 .page-title h1,
 .tips h1 {
-  color: #0f4c81;
+  color: rgb(15 76 129);
   font-size: 2rem;
   line-height: 1.2;
   margin-bottom: 1rem;
@@ -115,21 +115,21 @@ main {
 .page-title p,
 .about p,
 .tips p {
-  color: #555555;
+  color: rgb(85 85 85);
   margin-bottom: 1rem;
 }
 
 .hero img {
   border-radius: 8px;
-  box-shadow: 0 8px 22px rgba(15, 76, 129, 0.12);
+  box-shadow: 0 8px 22px rgb(215 220 226);
 }
 
 .button,
 button {
-  background-color: #0f4c81;
+  background-color: rgb(15 76 129);
   border: none;
   border-radius: 6px;
-  color: #ffffff;
+  color: rgb(255 255 255);
   cursor: pointer;
   display: inline-block;
   font: inherit;
@@ -143,8 +143,8 @@ button {
 .button:focus,
 button:hover,
 button:focus {
-  background-color: #0b385f;
-  outline: 3px solid #ffd166;
+  background-color: rgb(11 56 95);
+  outline: 3px solid rgb(255 209 102);
 }
 
 .cards,
@@ -159,10 +159,10 @@ button:focus {
 .tips article,
 .contact-section,
 .about {
-  background-color: #f4f4f4;
-  border: 1px solid #d7dce2;
+  background-color: rgb(244 244 244);
+  border: 1px solid rgb(215 220 226);
   border-radius: 8px;
-  box-shadow: 0 8px 22px rgba(15, 76, 129, 0.12);
+  box-shadow: 0 8px 22px rgb(215 220 226);
   padding: 1rem;
 }
 
@@ -177,7 +177,7 @@ button:focus {
 .tips h2,
 .contact-section h2,
 .about h2 {
-  color: #0f4c81;
+  color: rgb(15 76 129);
   margin-bottom: 0.5rem;
 }
 
@@ -204,7 +204,7 @@ label {
 
 input,
 textarea {
-  border: 1px solid #d7dce2;
+  border: 1px solid rgb(215 220 226);
   border-radius: 6px;
   font: inherit;
   padding: 0.75rem;
@@ -213,14 +213,14 @@ textarea {
 
 input:focus,
 textarea:focus {
-  border-color: #0f4c81;
-  outline: 3px solid #ffd166;
+  border-color: rgb(15 76 129);
+  outline: 3px solid rgb(255 209 102);
 }
 
 dialog {
   border: none;
   border-radius: 8px;
-  box-shadow: 0 8px 22px rgba(15, 76, 129, 0.12);
+  box-shadow: 0 8px 22px rgb(215 220 226);
   margin: auto;
   max-width: 500px;
   padding: 1.5rem;
@@ -228,7 +228,7 @@ dialog {
 }
 
 dialog::backdrop {
-  background-color: rgba(0, 0, 0, 0.55);
+  background-color: rgb(34 34 34);
 }
 
 .resource-card button {
@@ -236,30 +236,30 @@ dialog::backdrop {
 }
 
 #visitMessage {
-  color: #0f4c81;
+  color: rgb(15 76 129);
   font-weight: 700;
   margin-top: 1rem;
 }
 
 footer {
-  background-color: #0f4c81;
-  color: #ffffff;
+  background-color: rgb(15 76 129);
+  color: rgb(255 255 255);
   margin-top: 2rem;
   padding: 1rem;
   text-align: center;
 }
 
 footer a {
-  color: #ffffff;
+  color: rgb(255 255 255);
   display: inline-block;
   font-weight: 700;
   margin: 0.5rem 0.5rem 0;
-  text-decoration-color: #ffd166;
+  text-decoration-color: rgb(255 209 102);
   text-decoration-thickness: 3px;
   text-underline-offset: 0.25rem;
 }
 
 footer a:hover,
 footer a:focus {
-  color: #ffd166;
+  color: rgb(255 209 102);
 }
