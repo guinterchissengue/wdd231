@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Form Submitted | Student Study Resources</title>
-  <meta name="description" content="Confirmation page for the Student Study Resources contact form.">
+  <meta name="description" content="Confirmation page for the Student Study Resources contact form after a student submits a study goal.">
   <meta name="author" content="Guinter Chissengue">
 
-  <link rel="icon" href="images/logo.webp">
+  <link rel="icon" href="images/favicon.ico">
 
-  <meta property="og:title" content="Form Submitted">
-  <meta property="og:description" content="Confirmation page for the Student Study Resources form.">
+  <meta property="og:title" content="Study Support Form Submitted Successfully">
+  <meta property="og:description" content="Thank you page confirming that a student study support form was submitted successfully.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/project/images/study.webp">
   <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/project/form-action.html">
@@ -20,8 +19,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-large.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-large.css">
+
+  <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -31,7 +32,9 @@
       <span>Study Resources</span>
     </a>
 
-    <nav id="mainNav" class="always-open">
+    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+
+    <nav id="mainNav">
       <a href="index.html">Home</a>
       <a href="resources.html">Resources</a>
       <a href="study-tips.html">Study Tips</a>
@@ -49,7 +52,6 @@
   <footer>
     <p>&copy; 2026 Student Study Resources</p>
     <a href="references.html">References</a>
-    <a href="https://example.com/project-video">Project Demonstration Video</a>
   </footer>
 </body>
 </html>

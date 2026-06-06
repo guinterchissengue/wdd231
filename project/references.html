@@ -4,27 +4,71 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>References | Student Study Resources</title>
-  <meta name="description" content="References and attributions used for the Student Study Resources website.">
+  <meta name="description" content="References and image attributions used for the Student Study Resources final website project.">
   <meta name="author" content="Guinter Chissengue">
+
+  <link rel="icon" href="images/favicon.ico">
+
+  <meta property="og:title" content="References for Student Study Resources Website">
+  <meta property="og:description" content="View the references and image sources used to create the Student Study Resources final website project.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/project/images/study.webp">
+  <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/project/references.html">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-large.css">
+
+  <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
   <header>
-    <h1>References</h1>
+    <a class="logo" href="index.html">
+      <img src="images/logo.webp" alt="Student Study Resources logo" width="50" height="50">
+      <span>Study Resources</span>
+    </a>
+
+    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
+
+    <nav id="mainNav">
+      <a href="index.html">Home</a>
+      <a href="resources.html">Resources</a>
+      <a href="study-tips.html">Study Tips</a>
+    </nav>
   </header>
 
   <main>
-    <!-- This page is intentionally simple because the instructions say the references page does not need styling. -->
-    <ul>
-      <li>Unsplash. Study-related image references. https://unsplash.com/</li>
-      <li>BYU-Pathway Worldwide. WDD 131 course project requirements. https://www.byupathway.edu/</li>
-      <li>University of North Carolina at Chapel Hill Learning Center. Study skills and academic strategies. https://learningcenter.unc.edu/tips-and-tools/</li>
-      <li>Oxford Learning. Study tips and learning strategy inspiration. https://www.oxfordlearning.com/</li>
-    </ul>
+    <section class="page-title">
+      <h1>References</h1>
+      <p>These are the sources used for images and study information in this project.</p>
+    </section>
+
+    <section class="about">
+      <h2>Image Sources</h2>
+      <ul>
+        <li>Unsplash. Man sitting on a surface. https://unsplash.com/pt-br/fotografias/homem-sentado-na-superficie-F8sCVSW4t4E</li>
+        <li>Unsplash. Man using headphones while sitting in front of a MacBook. https://unsplash.com/pt-br/fotografias/homem-usando-fones-de-ouvido-enquanto-sentado-na-cadeira-em-frente-ao-macbook-4-EeTnaC1S4</li>
+        <li>Unsplash. Woman writing on white paper. https://unsplash.com/pt-br/fotografias/mulher-na-camisa-preta-e-branca-escrevendo-em-papel-branco-ddwbTn5HDdQ</li>
+        <li>Unsplash. Alarm clock, glasses, and pink sticky note. https://unsplash.com/pt-br/fotografias/despertador-oculos-e-post-it-rosa-em-branco-SVRCerA2Fsg</li>
+        <li>Unsplash. Person writing on white paper. https://unsplash.com/pt-br/fotografias/pessoa-escrevendo-em-white-paper-YnRNdB-XTME</li>
+        <li>Unsplash. Assorted books. https://unsplash.com/pt-br/fotografias/lote-de-livros-de-titulos-variados-IdhfwYkPGAs</li>
+      </ul>
+
+      <h2>Information Sources</h2>
+      <ul>
+        <li>BYU-Pathway Worldwide. WDD course project requirements. https://www.byupathway.edu/</li>
+        <li>University of North Carolina Learning Center. Study skills and academic strategies. https://learningcenter.unc.edu/tips-and-tools/</li>
+      </ul>
+    </section>
   </main>
 
   <footer>
-    <p><a href="index.html">Back to Student Study Resources</a></p>
+    <p>&copy; 2026 Student Study Resources</p>
+    <a href="index.html">Back to Home</a>
   </footer>
 </body>
 </html>

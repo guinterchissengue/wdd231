@@ -3,28 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Student Study Resources | Home</title>
-  <meta name="description" content="Student Study Resources provides study tips, academic support, productivity strategies, and learning resources for students.">
+  <meta name="description" content="Student Study Resources helps students improve study habits with practical tips, resources, and organization strategies.">
   <meta name="author" content="Guinter Chissengue">
 
-  <link rel="icon" href="images/logo.webp">
+  <link rel="icon" href="images/favicon.ico">
 
-  <meta property="og:title" content="Student Study Resources">
-  <meta property="og:description" content="Helpful study resources and academic strategies for students.">
+  <meta property="og:title" content="Student Study Resources for Better Learning">
+  <meta property="og:description" content="Improve your study habits with practical academic resources, study tips, and time management strategies.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/project/images/study.webp">
   <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/project/index.html">
 
-  <!-- Google Fonts required by the audit tool. -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/style-large.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/style-large.css">
 
-  <script type="module" src="js/main.js"></script>
+  <script type="module" src="scripts/main.js"></script>
 </head>
 
 <body>
@@ -34,10 +32,7 @@
       <span>Study Resources</span>
     </a>
 
-    <!-- I used a simple menu button so the navigation works well on small screens. -->
-    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">
-      &#9776;
-    </button>
+    <button id="menuButton" type="button" aria-label="Open navigation menu" aria-expanded="false">&#9776;</button>
 
     <nav id="mainNav">
       <a class="active" href="index.html">Home</a>
@@ -52,54 +47,29 @@
         <h1>Improve Your Study Habits</h1>
         <p>
           Discover practical strategies, productivity ideas, and academic resources designed
-          to help students learn better, stay organized, and prepare for success.
+          to help students learn better and stay organized.
         </p>
         <a class="button" href="resources.html">Explore Resources</a>
       </div>
 
-      <img
-        src="images/study.webp"
-        alt="Student studying with books and a laptop"
-        width="1200"
-        height="800"
-        loading="lazy"
-      >
+      <img src="images/study.webp" alt="Student studying with books and a laptop" width="1200" height="800" loading="lazy">
     </section>
 
-    <!-- These cards give users a quick summary of what the website offers. -->
     <section class="cards" aria-label="Main study support topics">
       <article>
-        <img
-          src="images/study-tips.webp"
-          alt="Student writing study notes"
-          width="600"
-          height="400"
-          loading="lazy"
-        >
+        <img src="images/study-tips.webp" alt="Student writing study notes" width="600" height="400" loading="lazy">
         <h2>Study Tips</h2>
         <p>Learn effective techniques that improve focus, memory, and understanding.</p>
       </article>
 
       <article>
-        <img
-          src="images/exam-prep.webp"
-          alt="Student preparing for an exam with books and notes"
-          width="600"
-          height="400"
-          loading="lazy"
-        >
+        <img src="images/exam-prep.webp" alt="Student preparing for an exam with books and notes" width="600" height="400" loading="lazy">
         <h2>Exam Preparation</h2>
         <p>Prepare for tests using practical strategies and organized study plans.</p>
       </article>
 
       <article>
-        <img
-          src="images/time-management.webp"
-          alt="Study planner and calendar used for time management"
-          width="600"
-          height="400"
-          loading="lazy"
-        >
+        <img src="images/time-management.webp" alt="Study planner and calendar used for time management" width="600" height="400" loading="lazy">
         <h2>Time Management</h2>
         <p>Create routines that help balance assignments, classes, and personal activities.</p>
       </article>
@@ -109,7 +79,7 @@
       <h2>Why This Website?</h2>
       <p>
         Many students struggle with deadlines, exams, and staying motivated. This website
-        provides simple academic support in one place so students can build better learning habits.
+        provides simple academic support in one place.
       </p>
       <p id="visitMessage"></p>
     </section>
@@ -118,7 +88,6 @@
   <footer>
     <p>&copy; 2026 Student Study Resources</p>
     <a href="references.html">References</a>
-    <a href="https://example.com/project-video">Project Demonstration Video</a>
   </footer>
 </body>
 </html>
