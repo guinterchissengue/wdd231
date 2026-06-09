@@ -1,14 +1,19 @@
-// Import attractions data
-import { attractions } from "../data/discover.mjs";
-
-// Container for cards
 const container = document.querySelector("#attractions-container");
-
-// Visitor message
 const visitorMessage = document.querySelector("#visitor-message");
 
-// Display visitor message based on localStorage
+// Responsive mobile navigation menu toggle
+const menuBtn = document.querySelector('#menuBtn');
+const navMenu = document.querySelector('#navMenu');
+
+if (menuBtn && navMenu) {
+    menuBtn.addEventListener('click', () => {
+        navMenu.classList.toggle('open');
+    });
+}
+
+// Display customized visual visitor message via localStorage tracking
 function showVisitorMessage() {
+    if (!visitorMessage) return;
     const now = Date.now();
     const lastVisit = localStorage.getItem("lastVisit");
     let message = "";
@@ -16,48 +21,53 @@ function showVisitorMessage() {
     if (!lastVisit) {
         message = "Welcome! Let us know if you have any questions.";
     } else {
-        const diffDays = Math.floor((now - lastVisit) / (1000 * 60 * 60 * 24));
+        const diffDays = Math.floor((now - parseInt(lastVisit)) / (1000 * 60 * 60 * 24));
         if (diffDays < 1) {
             message = "Back so soon! Awesome!";
         } else {
             message = `You last visited ${diffDays} ${diffDays === 1 ? "day" : "days"} ago.`;
         }
     }
-
     visitorMessage.textContent = message;
-
-    // Update localStorage
-    localStorage.setItem("lastVisit", now);
+    localStorage.setItem("lastVisit", now.toString());
 }
 
-// Display attractions cards
-function displayAttractions() {
-    container.innerHTML = "";
+// Fetch exactly 8 cards from the generated attractions JSON
+async function loadAttractions() {
+    if (!container) return;
+    try {
+        const response = await fetch("data/attractions.json");
+        if (!response.ok) throw new Error("Failed to fetch attractions data");
+        const attractions = await response.json();
 
-    attractions.forEach(attraction => {
-        const card = document.createElement("article");
-        card.classList.add("card");
+        container.innerHTML = "";
 
-        card.innerHTML = `
-            <img src="images/${attraction.image}" 
-                 alt="${attraction.name}" 
-                 loading="lazy" 
-                 width="300" 
-                 height="200">
-            <h2>${attraction.name}</h2>
-            <address>${attraction.address}</address>
-            <p>${attraction.description}</p>
-            <button>Learn More</button>
-        `;
+        attractions.forEach((attraction, index) => {
+            const card = document.createElement("article");
+            card.classList.add("card");
+            
+            // Explicitly map dynamic elements to CSS Named Grid Areas (card1, card2, etc.)
+            card.style.gridArea = `card${index + 1}`;
 
-        container.appendChild(card);
-    });
+            card.innerHTML = `
+                <img src="images/${attraction.image}" alt="${attraction.name}" loading="lazy" width="300" height="200">
+                <h2>${attraction.name}</h2>
+                <address>${attraction.address}</address>
+                <p>${attraction.description}</p>
+                <button class="learn-more-btn">Learn More</button>
+            `;
+            container.appendChild(card);
+        });
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = "<p>Unable to load dynamic cards layout.</p>";
+    }
 }
 
-// Footer info
+// Footer items
 document.querySelector("#year").textContent = new Date().getFullYear();
 document.querySelector("#lastModified").textContent = document.lastModified;
 
-// Initialize page
+// Initialize components
 showVisitorMessage();
-displayAttractions();
+loadAttractions();

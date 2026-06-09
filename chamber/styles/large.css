@@ -1,34 +1,44 @@
-/* Navigation desktop */
-@media (min-width: 768px) {
+@media (min-width: 600px) {
+    #menuBtn {
+        display: none;
+    }
+
     nav {
+        display: flex;
         flex-direction: row;
+        width: auto;
+        gap: 1.5rem;
+        margin-top: 0;
+    }
+    #attractions-container {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "card1 card2"
+            "card3 card4"
+            "card5 card6"
+            "card7 card8";
+    }
+}
+
+@media (min-width: 1024px) {
+    nav {
         justify-content: center;
         gap: 2rem;
     }
-}
 
-/* Tablet */
-@media (min-width: 768px) {
-    #attractions-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
     #attractions-container {
         grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
     }
-}
 
-/* Hover ONLY desktop */
-@media (min-width: 1024px) {
     .card img {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
     .card img:hover {
-        transform: scale(1.05);
-        filter: brightness(1.1);
+        transform: scale(1.04);
+        filter: brightness(1.08);
     }
 }

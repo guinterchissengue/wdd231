@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,95 +7,137 @@
 
     <title>Home | Inhambane Chamber of Commerce</title>
 
-    <!-- SEO básico -->
+    <!-- SEO metadata -->
     <meta name="description" content="Welcome to Inhambane Chamber of Commerce - supporting local businesses and tourism in Mozambique.">
     <meta name="author" content="Guinter Chissengue">
 
-    <!-- Open Graph (social sharing) -->
+    <!-- Open Graph metadata for social media sharing -->
     <meta property="og:title" content="Inhambane Chamber of Commerce – Business & Tourism Hub">
     <meta property="og:description" content="Discover business opportunities, connect with local companies, and explore tourism in Inhambane, Mozambique.">
     <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp">
     <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/chamber/">
 
-    <!-- Favicon -->
+    <!--  Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Google Fonts (obrigatório pelo auditor) -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- JS -->
+    <!-- Home page JavaScript -->
     <script defer src="scripts/home.js"></script>
 </head>
 
 <body>
 
-<header>
-    <div class="header-content">
-        <p class="site-name">Inhambane Chamber of Commerce</p>
+    <!-- Site header  -->
+    <header>
+        <div class="header-content">
 
-        <nav>
-            <a href="index.html" class="active">Home</a>
-            <a href="directory.html">Directory</a>
-            <a href="#">Discover</a>
-            <a href="#">Join</a>
-        </nav>
-    </div>
-</header>
+            <!-- Chamber name -->
+            <p class="site-name">Inhambane Chamber of Commerce</p>
 
-<main>
+            <button id="menuBtn" aria-label="Toggle Menu">☰</button>
 
-    <!-- HERO SECTION -->
-    <section class="hero">
-        <img src="images/hero.jpg" alt="Inhambane city view">
+            <nav id="navMenu">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="discover.html">Discover</a>
+                <a href="join.html">Join</a>
+            </nav>
 
-        <div class="hero-text">
-            <h1>Inhambane Chamber of Commerce</h1>
-            <p>Connecting businesses, tourism, and opportunities in Inhambane.</p>
-            <a class="cta-button" href="#">Join the Chamber</a>
         </div>
-    </section>
+    </header>
 
-    <!-- MAIN GRID -->
-    <section class="home-grid">
+    <main>
 
-        <!-- EVENTS -->
-        <div class="card">
-            <h2>Upcoming Events</h2>
-            <ul>
-                <li>Business Networking - June 2026</li>
-                <li>Tourism Expo - July 2026</li>
-                <li>Local Market Day - August 2026</li>
-            </ul>
-        </div>
+        <!-- Hero section -->
+        <section class="hero">
 
-        <!-- WEATHER -->
-        <div class="card">
-            <h2>Weather</h2>
-            <p id="temp">Loading...</p>
-            <p id="desc"></p>
+            <img
+                src="images/hero.webp"
+                alt="Inhambane city view"
+                loading="eager"
+                width="1200"
+                height="500"
+            >
 
-            <h3>3-Day Forecast</h3>
-            <div id="forecast"></div>
-        </div>
+            <div class="hero-text">
+                <h1>Inhambane Chamber of Commerce</h1>
 
-        <!-- SPOTLIGHTS -->
-        <div class="spotlights" id="spotlights"></div>
+                <p>
+                    Connecting businesses, tourism, and opportunities in Inhambane.
+                </p>
 
-    </section>
+                <!-- Call-to-action button -->
+                <a class="cta-button" href="join.html">
+                    Join the Chamber
+                </a>
 
-</main>
+            </div>
 
-<footer>
-    <p>&copy; <span id="year"></span> Inhambane Chamber</p>
-    <p>Last Modification: <span id="lastModified"></span></p>
-</footer>
+        </section>
+
+        <!-- Main content grid -->
+        <section class="home-grid">
+
+            <!-- Upcoming events section -->
+            <div class="card">
+
+                <h2>Upcoming Events</h2>
+
+                <ul>
+                    <li>Business Networking - June 2026</li>
+                    <li>Tourism Expo - July 2026</li>
+                    <li>Local Market Day - August 2026</li>
+                </ul>
+
+            </div>
+
+            <!-- Weather information section -->
+            <div class="card">
+
+                <h2>Weather</h2>
+
+                <!-- Current temperature -->
+                <p id="temp">Loading...</p>
+                <!-- Current weather description -->
+                <p id="desc"></p>
+                <h3>3-Day Forecast</h3>
+
+                <div id="forecast"></div>
+
+            </div>
+            <div
+                class="spotlights"
+                id="spotlights"
+            ></div>
+
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            &copy;
+            <span id="year"></span>
+            Inhambane Chamber
+        </p>
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
 
 </body>
 </html>
+```

@@ -1,69 +1,118 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Discover | Inhambane Chamber</title>
 
+    <!-- SEO metadata -->
     <meta name="description" content="Discover attractions and points of interest in Inhambane.">
     <meta name="author" content="Guinter Chissengue">
 
-    <!-- Open Graph -->
+    <!-- Open Graph metadata for social media sharing -->
     <meta property="og:title" content="Discover Inhambane">
-
     <meta property="og:description" content="Explore the best attractions, culture, and natural beauty of Inhambane, including beaches, markets, and historic landmarks.">
-
     <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp">
     <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/chamber/discover.html">
 
-    <!-- favicon added -->
+    <!--  Favicon -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small.css">
     <link rel="stylesheet" href="styles/large.css">
 
-    <!-- JS module -->
-    <script type="module" src="scripts/discover.js"></script>
+    <!-- Discover page JavaScript -->
+    <script defer src="scripts/discover.js"></script>
+
 </head>
 
 <body>
 
-<header>
-    <p class="site-name">Inhambane Chamber of Commerce</p>
+    <!-- Site header -->
+    <header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="directory.html">Directory</a>
-        <a href="discover.html" class="active">Discover</a>
-        <a href="join.html">Join</a>
-    </nav>
-</header>
+        <div class="header-content">
+            <p class="site-name">
+                Inhambane Chamber of Commerce
+            </p>
 
-<main>
+            <!-- Mobile navigation-->
+            <button
+                id="menuBtn"
+                aria-label="Toggle Menu"
+            >
+                ☰
+            </button>
 
-    <h1>Discover Inhambane</h1>
+            <!-- Main navigation menu -->
+            <nav id="navMenu">
 
-    <!-- Visitor message -->
-    <div id="visitor-message" class="visitor-message"></div>
+                <a href="index.html">
+                    Home
+                </a>
 
-    <!-- Cards container -->
-    <section id="attractions-container"></section>
+                <a href="directory.html">
+                    Directory
+                </a>
 
-</main>
+                <a
+                    href="discover.html"
+                    class="active"
+                >
+                    Discover
+                </a>
 
-<footer>
-    <p>&copy; <span id="year"></span> Guinter Chissengue</p>
-    <p>Last Modification: <span id="lastModified"></span></p>
-</footer>
+                <a href="join.html">
+                    Join
+                </a>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <!-- Main page heading -->
+        <h1>
+            Discover Inhambane
+        </h1>
+        <div
+            id="visitor-message"
+            class="visitor-message"
+        ></div>
+        <section id="attractions-container"></section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>
+            &copy;
+            <span id="year"></span>
+            Guinter Chissengue
+        </p>
+        <p>
+            Last Modification:
+            <span id="lastModified"></span>
+        </p>
+
+    </footer>
 
 </body>
 </html>
+```

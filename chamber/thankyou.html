@@ -1,101 +1,44 @@
+```html
 <!DOCTYPE html>
 <html lang="en-US">
-
 <head>
-
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1.0"
-    >
+    <!-- SEO metadata -->
+    <meta name="description" content="Thank you for joining the Inhambane Chamber of Commerce.">
+    <meta name="author" content="Guinter Chissengue">
 
-    <meta
-        name="description"
-        content="Thank you for joining the Inhambane Chamber of Commerce."
-    >
-
-    <meta
-        name="author"
-        content="Guinter Chissengue"
-    >
-
-    <!-- Open Graph -->
-    <meta
-        property="og:title"
-        content="Thank You | Inhambane Chamber of Commerce"
-    >
-
-    <meta
-        property="og:description"
-        content="Thank you for your Chamber membership application."
-    >
-
-    <meta
-        property="og:image"
-        content="https://yourdomain.com/images/chamber-social.webp"
-    >
-
-    <meta
-        property="og:url"
-        content="https://yourdomain.com/thankyou.html"
-    >
-
-    <meta
-        property="og:type"
-        content="website"
-    >
+    <!-- Open Graph metadata -->
+    <meta property="og:title" content="Thank You | Inhambane Chamber of Commerce">
+    <meta property="og:description" content="Thank you for your Chamber membership application.">
+    <meta property="og:image" content="https://guinterchissengue.github.io/wdd231/chamber/images/preview.webp">
+    <meta property="og:url" content="https://guinterchissengue.github.io/wdd231/chamber/thankyou.html">
+    <meta property="og:type" content="website">
 
     <title>Thank You | Inhambane Chamber of Commerce</title>
 
     <!-- Favicon -->
-    <link
-        rel="icon"
-        href="favicon.ico"
-    >
+    <link rel="icon" href="images/favicon.ico">
 
     <!-- Google Fonts -->
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com"
-    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin
-    >
-
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet"
-    >
-
-    <!-- CSS -->
-    <link
-        rel="stylesheet"
-        href="styles/normalize.css"
-    >
-
-    <link
-        rel="stylesheet"
-        href="styles/join.css"
-    >
-
-    <!-- JavaScript -->
-    <script
-        src="scripts/thankyou.js"
-        defer
-    ></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/join.css">
+    <script src="scripts/thankyou.js" defer></script>
 
 </head>
 
 <body>
 
+    <!-- Header -->
     <header>
 
         <div class="header-content">
-
             <h1>
                 Inhambane Chamber of Commerce
             </h1>
@@ -106,37 +49,34 @@
 
     <main>
 
+        <!-- Confirmation section -->
         <section class="thankyou-section">
 
             <h2>
                 Thank You for Your Application!
             </h2>
-
             <p>
                 Your membership application was submitted successfully.
             </p>
 
+            <!-- Dynamic content inserted via JavaScript -->
             <div id="results"></div>
 
         </section>
 
     </main>
 
+    <!-- Footer -->
     <footer>
-
         <p>
             &copy;
             <span id="year"></span>
             Inhambane Chamber of Commerce
         </p>
-
-        <p>
+    <p>
             Last Modification:
             <span id="lastModified"></span>
         </p>
-
     </footer>
-
 </body>
-
 </html>

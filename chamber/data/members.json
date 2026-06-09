@@ -3,8 +3,8 @@
     "name": "Mercado Municipal de Maxixe",
     "address": "Maxixe, Inhambane",
     "phone": "+258 84 000 0001",
-    "website": "",
-    "image": "mercado.jpg",
+    "website": "https://example.com",
+    "image": "mercado.webp",
     "membership": 2
   },
   {
@@ -12,47 +12,55 @@
     "address": "Baía de Inhambane",
     "phone": "+258 84 000 0002",
     "website": "",
-    "image": "ferry.jpg",
+    "image": "ferry.webp",
     "membership": 1
   },
   {
     "name": "Hospital da Maxixe",
     "address": "Maxixe, Inhambane",
     "phone": "+258 84 000 0003",
-    "website": "",
-    "image": "chicuque.jpg",
+    "website": "https://example.com",
+    "image": "chicuque.webp",
     "membership": 2
   },
   {
     "name": "Catedral de Inhambane",
     "address": "Cidade de Inhambane",
     "phone": "+258 84 000 0004",
-    "website": "",
-    "image": "catedral.jpg",
+    "website": "https://example.com",
+    "image": "catedral.webp",
     "membership": 3
   },
   {
     "name": "Mercado Central de Inhambane",
     "address": "Cidade de Inhambane",
     "phone": "+258 84 000 0005",
-    "website": "",
-    "image": "m-central-inhambane.jpg",
+    "website": "https://example5.com",
+    "image": "m-central-inhambane.webp",
     "membership": 2
   },
   {
     "name": "Aeroporto de Inhambane",
     "address": "Cidade de Inhambane",
     "phone": "+258 84 000 0006",
-    "website": "",
-    "image": "aeroporto.jpg",
+    "website": "https://example6.com",
+    "image": "aeroporto.webp",
     "membership": 1
   },
   {
     "name": "Praia do Tofo",
     "address": "Tofo, Inhambane",
     "phone": "+258 84 000 0007",
-    "website": "",
-    "image": "beach.jpg",
+    "website": "https://example7.com",
+    "image": "beach.webp",
     "membership": 3
+  },
+  {
+    "name": "Reserva Marinha de Tofo",
+    "address": "Tofo, Inhambane",
+    "phone": "+258 84 000 0008",
+    "website": "https://example8.com",
+    "image": "tofo-reserve.webp",
+    "membership": 2
   }
 ]

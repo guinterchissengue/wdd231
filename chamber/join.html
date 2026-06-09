@@ -2,25 +2,21 @@
 <html lang="en-US">
 
 <head>
-
     <meta charset="UTF-8">
-
     <meta
         name="viewport"
         content="width=device-width, initial-scale=1.0"
     >
 
+    <!-- SEO metadata -->
     <meta
         name="description"
-        content="Join the Inhambane Chamber of Commerce and become a member."
-    >
-
+        content="Join the Inhambane Chamber of Commerce and become a member.">
     <meta
         name="author"
         content="Guinter Chissengue"
     >
-
-    <!-- Open Graph -->
+    <!-- Open Graph metadata -->
     <meta
         property="og:title"
         content="Join | Inhambane Chamber of Commerce"
@@ -48,7 +44,7 @@
 
     <title>Join | Inhambane Chamber of Commerce</title>
 
-    <!-- Favicon -->
+    <!--  Favicon -->
     <link
         rel="icon"
         href="favicon.ico"
@@ -70,8 +66,6 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet"
     >
-
-    <!-- CSS -->
     <link
         rel="stylesheet"
         href="styles/normalize.css"
@@ -81,8 +75,6 @@
         rel="stylesheet"
         href="styles/join.css"
     >
-
-    <!-- JavaScript -->
     <script
         src="scripts/join.js"
         defer
@@ -92,14 +84,17 @@
 
 <body>
 
+    <!-- Site header -->
     <header>
 
         <div class="header-content">
 
+            <!-- Chamber name -->
             <p class="site-name">
                 Inhambane Chamber of Commerce
             </p>
 
+            <!-- Mobile navigation button -->
             <button
                 id="menuBtn"
                 aria-label="Open navigation menu"
@@ -107,6 +102,7 @@
                 ☰
             </button>
 
+            <!-- Main navigation -->
             <nav id="navMenu">
 
                 <a href="index.html">
@@ -136,19 +132,22 @@
 
     <main>
 
-        <!-- SINGLE H1 INSIDE MAIN -->
+        <!-- Main page heading -->
         <h1>
             Join the Inhambane Chamber of Commerce
         </h1>
 
+        <!-- Layout containing application form and membership cards -->
         <section class="join-layout">
 
+            <!-- Membership application form -->
             <form
                 method="get"
                 action="thankyou.html"
                 class="membership-form"
             >
 
+                <!-- Applicant first name -->
                 <label>
                     First Name
 
@@ -161,6 +160,7 @@
                     >
                 </label>
 
+                <!-- Applicant last name -->
                 <label>
                     Last Name
 
@@ -173,6 +173,7 @@
                     >
                 </label>
 
+                <!-- Applicant organizational title -->
                 <label>
                     Organizational Title
 
@@ -186,6 +187,7 @@
                     >
                 </label>
 
+                <!-- Applicant email -->
                 <label>
                     Email Address
 
@@ -199,6 +201,7 @@
                     >
                 </label>
 
+                <!-- Applicant phone number -->
                 <label>
                     Mobile Phone Number
 
@@ -211,6 +214,7 @@
                     >
                 </label>
 
+                <!-- Business or organization name -->
                 <label>
                     Business / Organization Name
 
@@ -222,7 +226,6 @@
                         required
                     >
                 </label>
-
                 <label>
                     Membership Level
 
@@ -232,10 +235,12 @@
                         required
                     >
 
+                        <!-- Default option -->
                         <option value="">
                             Select Membership
                         </option>
 
+                        <!-- Membership options -->
                         <option value="np">
                             NP Membership
                         </option>
@@ -256,6 +261,7 @@
 
                 </label>
 
+                <!-- Business description -->
                 <label>
                     Business Description
 
@@ -267,12 +273,14 @@
 
                 </label>
 
+                <!-- Hidden field used to store submission timestamp -->
                 <input
                     type="hidden"
                     name="timestamp"
                     id="timestamp"
                 >
 
+                <!-- Form submission button -->
                 <input
                     type="submit"
                     value="Submit Membership Application"
@@ -281,8 +289,10 @@
 
             </form>
 
+            <!-- Membership information cards -->
             <section class="membership-cards">
 
+                <!-- NP Membership card -->
                 <div class="membership-card animate-card">
 
                     <h2>
@@ -293,6 +303,7 @@
                         Designed for nonprofit organizations.
                     </p>
 
+                    <!-- Opens NP membership modal -->
                     <button
                         type="button"
                         data-modal="npModal"
@@ -302,6 +313,7 @@
 
                 </div>
 
+                <!-- Bronze Membership card -->
                 <div class="membership-card animate-card">
 
                     <h2>
@@ -312,6 +324,7 @@
                         Basic membership benefits for small businesses.
                     </p>
 
+                    <!-- Opens Bronze membership modal -->
                     <button
                         type="button"
                         data-modal="bronzeModal"
@@ -321,6 +334,7 @@
 
                 </div>
 
+                <!-- Silver Membership card -->
                 <div class="membership-card animate-card">
 
                     <h2>
@@ -331,6 +345,7 @@
                         Additional advertising and event discounts.
                     </p>
 
+                    <!-- Opens Silver membership modal -->
                     <button
                         type="button"
                         data-modal="silverModal"
@@ -340,6 +355,7 @@
 
                 </div>
 
+                <!-- Gold Membership card -->
                 <div class="membership-card animate-card">
 
                     <h2>
@@ -350,6 +366,7 @@
                         Premium benefits and spotlight promotions.
                     </p>
 
+                    <!-- Opens Gold membership modal -->
                     <button
                         type="button"
                         data-modal="goldModal"
@@ -363,29 +380,26 @@
 
         </section>
 
-        <!-- MODALS -->
-
         <dialog id="npModal">
 
+            <!-- Modal title -->
             <h2>
                 NP Membership Benefits
             </h2>
-
             <ul>
                 <li>No membership fee</li>
                 <li>Community event participation</li>
                 <li>Basic networking opportunities</li>
             </ul>
 
-            <button
-                type="button"
-                class="close-modal"
-            >
+            <!-- Close modal -->
+            <button type="button" class="close-modal">
                 Close
             </button>
 
         </dialog>
 
+        <!-- Bronze Modal -->
         <dialog id="bronzeModal">
 
             <h2>
@@ -398,15 +412,13 @@
                 <li>Training workshops</li>
             </ul>
 
-            <button
-                type="button"
-                class="close-modal"
-            >
+            <button type="button" class="close-modal">
                 Close
             </button>
 
         </dialog>
 
+        <!-- Silver Modal -->
         <dialog id="silverModal">
 
             <h2>
@@ -419,15 +431,13 @@
                 <li>Event discounts</li>
             </ul>
 
-            <button
-                type="button"
-                class="close-modal"
-            >
+            <button type="button" class="close-modal">
                 Close
             </button>
 
         </dialog>
 
+        <!-- Gold Modal -->
         <dialog id="goldModal">
 
             <h2>
@@ -440,10 +450,7 @@
                 <li>Premium business promotion</li>
             </ul>
 
-            <button
-                type="button"
-                class="close-modal"
-            >
+            <button type="button" class="close-modal">
                 Close
             </button>
 
@@ -451,21 +458,20 @@
 
     </main>
 
+    <!-- Footer section -->
     <footer>
-
         <p>
             &copy;
             <span id="year"></span>
             Inhambane Chamber of Commerce
         </p>
-
         <p>
             Last Modification:
             <span id="lastModified"></span>
         </p>
-
     </footer>
-
 </body>
-
 </html>
+
+
+        

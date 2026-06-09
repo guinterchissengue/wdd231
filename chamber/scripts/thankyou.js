@@ -1,30 +1,18 @@
-// Footer year
-document.querySelector("#year").textContent =
-new Date().getFullYear();
+// Footer configuration rules
+document.querySelector("#year").textContent = new Date().getFullYear();
+document.querySelector("#lastModified").textContent = document.lastModified;
 
-// Last modified date
-document.querySelector("#lastModified").textContent =
-document.lastModified;
+// Extract submission values from URL parameters
+const params = new URLSearchParams(window.location.search);
+const results = document.querySelector("#results");
 
-// Get submitted data
-const params =
-new URLSearchParams(window.location.search);
-
-// Results container
-const results =
-document.querySelector("#results");
-
-// Display submitted information
-results.innerHTML = `
-<p><strong>First Name:</strong> ${params.get("firstname")}</p>
-
-<p><strong>Last Name:</strong> ${params.get("lastname")}</p>
-
-<p><strong>Email:</strong> ${params.get("email")}</p>
-
-<p><strong>Phone Number:</strong> ${params.get("phone")}</p>
-
-<p><strong>Business Name:</strong> ${params.get("organization")}</p>
-
-<p><strong>Application Date:</strong> ${params.get("timestamp")}</p>
-`;
+if (results) {
+    results.innerHTML = `
+        <p><strong>First Name:</strong> ${params.get("firstname") || 'N/A'}</p>
+        <p><strong>Last Name:</strong> ${params.get("lastname") || 'N/A'}</p>
+        <p><strong>Email:</strong> ${params.get("email") || 'N/A'}</p>
+        <p><strong>Phone Number:</strong> ${params.get("phone") || 'N/A'}</p>
+        <p><strong>Business Name:</strong> ${params.get("organization") || 'N/A'}</p>
+        <p><strong>Application Date:</strong> ${params.get("timestamp") || 'N/A'}</p>
+    `;
+}
