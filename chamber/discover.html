@@ -52,12 +52,14 @@
             <button
                 id="menuBtn"
                 aria-label="Toggle Menu"
+                aria-expanded="false"
+                aria-controls="navMenu"
             >
                 ☰
             </button>
 
             <!-- Main navigation menu -->
-            <nav id="navMenu">
+            <nav id="navMenu" aria-label="Main Navigation">
 
                 <a href="index.html">
                     Home
@@ -70,6 +72,7 @@
                 <a
                     href="discover.html"
                     class="active"
+                    aria-current="page"
                 >
                     Discover
                 </a>
@@ -114,4 +117,3 @@
 
 </body>
 </html>
-

@@ -1,8 +1,11 @@
+/* ================= TABLET AND LARGER (NON-MOBILE) VIEWS ================= */
 @media (min-width: 600px) {
+    /* Hide the hamburger button on larger screens */
     #menuBtn {
         display: none;
     }
 
+    /* Show the navigation as a horizontal row */
     nav {
         display: flex;
         flex-direction: row;
@@ -10,6 +13,8 @@
         gap: 1.5rem;
         margin-top: 0;
     }
+
+    /* NAMED GRID AREAS - LAYOUT 2 (two columns) */
     #attractions-container {
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
@@ -18,21 +23,8 @@
             "card5 card6"
             "card7 card8";
     }
-}
 
-@media (min-width: 1024px) {
-    nav {
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    #attractions-container {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-areas:
-            "card1 card2 card3 card4"
-            "card5 card6 card7 card8";
-    }
-
+    /* Image hover effect - applied on larger views only (NOT on mobile) */
     .card img {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
@@ -40,5 +32,21 @@
     .card img:hover {
         transform: scale(1.04);
         filter: brightness(1.08);
+    }
+}
+
+/* ================= DESKTOP VIEWS ================= */
+@media (min-width: 1024px) {
+    nav {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    /* NAMED GRID AREAS - LAYOUT 3 (four columns) */
+    #attractions-container {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "card1 card2 card3 card4"
+            "card5 card6 card7 card8";
     }
 }
