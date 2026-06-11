@@ -1,19 +1,15 @@
-// This page loads study resources from a JSON file and displays them as cards.
-const menuButton = document.querySelector(`#menuButton`);
-const mainNav = document.querySelector(`#mainNav`);
+// Load study tips from JSON and display each as a card; click opens dialog with details.
+import { setupMenu } from "./menu.js";
+
 const container = document.querySelector(`#resourceContainer`);
 const modal = document.querySelector(`#resourceModal`);
 const modalTitle = document.querySelector(`#modalTitle`);
 const modalText = document.querySelector(`#modalText`);
 const closeModal = document.querySelector(`#closeModal`);
 
-function toggleMenu() {
-  mainNav.classList.toggle(`open`);
-
-  const isOpen = mainNav.classList.contains(`open`);
-  menuButton.setAttribute(`aria-expanded`, `${isOpen}`);
-}
-
+// Same shared menu behaviour as the rest of the site.
+setupMenu();
+// Creates a resource card using a template literal for cleaner, readable markup.
 function buildResourceCard(resource) {
   const card = document.createElement(`article`);
   card.classList.add(`resource-card`);
@@ -26,8 +22,8 @@ function buildResourceCard(resource) {
     <button class="button" type="button">View Details</button>
   `;
 
+ // Insert full description into reusable modal and display when a card is clicked.
   const button = card.querySelector(`button`);
-
   button.addEventListener(`click`, () => {
     modalTitle.textContent = `${resource.title}`;
     modalText.textContent = `${resource.description}`;
@@ -37,13 +33,16 @@ function buildResourceCard(resource) {
   return card;
 }
 
+// Fetch and render data asynchronously; errors are handled with try/catch and a friendly message.
 async function displayResources() {
   try {
     const response = await fetch(`data/resources.json`);
     const resources = await response.json();
 
+    // Clear the "Loading..." placeholder before we add the real cards.
     container.innerHTML = ``;
 
+    // Skip any half-finished entries, then append a card for each valid one.
     resources
       .filter((resource) => resource.title && resource.description)
       .forEach((resource) => {
@@ -53,15 +52,11 @@ async function displayResources() {
     container.innerHTML = `
       <p>Unable to load resources. Please try again later.</p>
     `;
-
     console.error(error);
   }
 }
 
-if (menuButton && mainNav) {
-  menuButton.addEventListener(`click`, toggleMenu);
-}
-
+// Let the user close the dialog with the button inside it.
 if (closeModal) {
   closeModal.addEventListener(`click`, () => {
     modal.close();

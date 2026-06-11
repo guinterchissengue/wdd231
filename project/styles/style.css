@@ -1,4 +1,3 @@
-/* This reset helps the layout look consistent in different browsers. */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -233,6 +232,24 @@ dialog::backdrop {
 
 .resource-card button {
   width: 100%;
+}
+
+/* Styles for form summary definition list: aligns labels and values neatly. */
+#summaryList {
+  display: grid;
+  gap: 0.25rem 1rem;
+  grid-template-columns: auto 1fr;
+  margin: 1rem 0;
+}
+
+#summaryList dt {
+  color: rgb(15 76 129);
+  font-weight: 700;
+}
+
+#summaryList dd {
+  margin: 0;
+  word-break: break-word;
 }
 
 #visitMessage {

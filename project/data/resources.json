@@ -82,5 +82,33 @@
     "difficulty": "Easy",
     "benefit": "Supports better focus",
     "description": "Maintain a consistent sleep schedule so your brain can rest and process information."
+  },
+  {
+    "title": "Spaced Repetition",
+    "category": "Exam Preparation",
+    "difficulty": "Medium",
+    "benefit": "Strengthens memory over time",
+    "description": "Review material at growing intervals so it moves into long-term memory instead of fading."
+  },
+  {
+    "title": "Feynman Technique",
+    "category": "Learning",
+    "difficulty": "Medium",
+    "benefit": "Deepens understanding",
+    "description": "Explain a topic in simple words as if teaching someone else to expose any gaps in your knowledge."
+  },
+  {
+    "title": "Digital Detox",
+    "category": "Wellness",
+    "difficulty": "Hard",
+    "benefit": "Reduces distractions",
+    "description": "Set phone-free study periods so notifications stop breaking your concentration."
+  },
+  {
+    "title": "SQ3R Method",
+    "category": "Note Taking",
+    "difficulty": "Medium",
+    "benefit": "Improves reading retention",
+    "description": "Survey, Question, Read, Recite, and Review each chapter to study textbooks more actively."
   }
 ]

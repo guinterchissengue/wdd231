@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Tips | Student Study Resources</title>
+<!-- Page metadata for SEO and social media sharing (title, description, Open Graph). -->
+   <title>Study Tips | Student Study Resources</title>
   <meta name="description" content="Learn practical study routines and productivity tips that help students reduce stress, stay focused, and prepare for exams.">
   <meta name="author" content="Guinter Chissengue">
 
@@ -26,7 +27,8 @@
 </head>
 
 <body>
-  <header>
+<!-- Header with logo, mobile menu button, and navigation; .active link shows current page. -->  
+ <header>
     <a class="logo" href="index.html">
       <img src="images/logo.webp" alt="Student Study Resources logo" width="50" height="50">
       <span>Study Resources</span>
@@ -42,6 +44,7 @@
   </header>
 
   <main>
+<!-- Study Tips page with tips, weekly-plan modal, and contact form to form-action.html. --> 
     <section class="tips">
       <h1>Study Tips for Success</h1>
 
@@ -63,6 +66,7 @@
       <button id="openModal" class="button" type="button">View Weekly Study Plan</button>
     </section>
 
+    <!-- Modal dialog with the suggested weekly plan -->
     <dialog id="studyModal">
       <h2>Weekly Study Plan</h2>
       <p>Monday: Review class notes<br>Wednesday: Practice exercises<br>Friday: Prepare summaries and check deadlines</p>
@@ -72,7 +76,8 @@
     <section class="contact-section">
       <h2>Contact Support</h2>
 
-      <form action="form-action.html" method="get">
+<!-- Contact form with method="get" to pass answers via URL for display on form-action.html. -->     
+  <form action="form-action.html" method="get">
         <label for="name">Name</label>
         <input id="name" name="name" type="text" autocomplete="name" required>
 
@@ -90,12 +95,17 @@
     </section>
   </main>
 
-  <footer>
-  <p>&copy; 2026 Student Study Resources</p>
-  <a href="references.html">References</a>
-  <a href="https://www.loom.com/share/fde67e3be71d449fab6d2e8666b626ce" target="_blank" rel="noopener">
-    Project Demonstration Video| BYU-Pathway WDD 231 Project | Guinter Chissengue
-  </a>
+<!-- Consistent footer across all pages with link to project video. -->
+<footer>
+  <div>
+    <a href="references.html" target="_blank" rel="noopener">
+      References
+    </a>
+  </div>
+  <div style="margin-top: 5px;">
+    <a href="https://www.loom.com/share/92b799890cb9436caf9cfda4ceadea06" target="_blank" rel="noopener">
+      Project Demonstration Video
+    </a>
+  </div>
+  <p>&copy; 2026 Student Study Resources| BYU-Pathway WDD 231 Final Project| Guinter Chissengue</p>
 </footer>
-</body>
-</html>

@@ -1,4 +1,6 @@
+
 @media screen and (min-width: 768px) {
+  /* No hamburger needed once there's room for the full menu */
   #menuButton {
     display: none;
   }
@@ -25,6 +27,7 @@
     font-size: 2.5rem;
   }
 
+  /* Three topic cards side by side */
   .cards {
     grid-template-columns: repeat(3, 1fr);
   }

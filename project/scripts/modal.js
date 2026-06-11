@@ -1,33 +1,23 @@
-// This file controls the study tips page menu and weekly plan dialog.
-const menuButton = document.querySelector(`#menuButton`);
-const mainNav = document.querySelector(`#mainNav`);
+// Study Tips page: handles the menu plus the "Weekly Study Plan" dialog.
+import { setupMenu } from "./menu.js";
+
 const openButton = document.querySelector(`#openModal`);
 const closeButton = document.querySelector(`#closeStudyModal`);
 const modal = document.querySelector(`#studyModal`);
 
-function toggleMenu() {
-  mainNav.classList.toggle(`open`);
+// Shared navigation, same as everywhere else.
+setupMenu();
 
-  const isOpen = mainNav.classList.contains(`open`);
-  menuButton.setAttribute(`aria-expanded`, `${isOpen}`);
-}
-
-function openStudyPlan() {
-  modal.showModal();
-}
-
-function closeStudyPlan() {
-  modal.close();
-}
-
-if (menuButton && mainNav) {
-  menuButton.addEventListener(`click`, toggleMenu);
-}
-
+// Pop the weekly plan open when the user asks for it.
 if (openButton && modal) {
-  openButton.addEventListener(`click`, openStudyPlan);
+  openButton.addEventListener(`click`, () => {
+    modal.showModal();
+  });
 }
 
+// Let them close it again.
 if (closeButton && modal) {
-  closeButton.addEventListener(`click`, closeStudyPlan);
+  closeButton.addEventListener(`click`, () => {
+    modal.close();
+  });
 }
