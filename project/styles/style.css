@@ -249,7 +249,7 @@ dialog::backdrop {
 
 #summaryList dd {
   margin: 0;
-  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 #visitMessage {
@@ -264,6 +264,10 @@ footer {
   margin-top: 2rem;
   padding: 1rem;
   text-align: center;
+}
+
+.footer-links {
+  margin-bottom: 0.25rem;
 }
 
 footer a {
