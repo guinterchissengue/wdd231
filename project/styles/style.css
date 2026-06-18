@@ -166,8 +166,10 @@ button:focus {
 }
 
 .cards img {
+  aspect-ratio: 3 / 2;
   border-radius: 6px;
   margin-bottom: 1rem;
+  object-fit: cover;
   width: 100%;
 }
 
@@ -189,6 +191,7 @@ button:focus {
 .tips {
   display: grid;
   gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 form {
@@ -232,6 +235,15 @@ dialog::backdrop {
 
 .resource-card button {
   width: 100%;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.resource-card .button {
+  margin-top: auto;
 }
 
 /* Styles for form summary definition list: aligns labels and values neatly. */

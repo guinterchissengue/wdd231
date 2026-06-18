@@ -35,6 +35,12 @@
   .resource-grid {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
+
+  /* Keep the weekly-plan button at content width instead of spanning the whole row. */
+  .tips #openModal {
+    justify-self: start;
+    width: auto;
+  }
 }
 
 @media screen and (max-width: 480px) {
